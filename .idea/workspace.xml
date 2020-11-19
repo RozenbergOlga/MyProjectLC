@@ -5,10 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d2b2c62-eda1-4f4d-affe-ad9cd2114048" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/specs/basic.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/specs/basic.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdio.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/wdio.conf.js" afterDir="false" />
     </list>
@@ -64,7 +60,7 @@
       <updated>1605766614525</updated>
       <workItem from="1605766615595" duration="4067000" />
       <workItem from="1605771807341" duration="79000" />
-      <workItem from="1605772270529" duration="3098000" />
+      <workItem from="1605772270529" duration="3564000" />
     </task>
     <task id="LOCAL-00001" summary=".gitignore">
       <created>1605771549654</created>
@@ -73,7 +69,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605771549654</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="allure report added">
+      <created>1605776144144</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605776144144</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -81,16 +84,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value=".gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value=".gitignore" />
+    <MESSAGE value="allure report added" />
+    <option name="LAST_COMMIT_MESSAGE" value="allure report added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="673" y="314" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605776043144">
       <screen x="0" y="25" width="1920" height="966" />
     </state>
     <state x="673" y="314" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1920.966/1920.-13.1920.1055@0.25.1920.966" timestamp="1605776043144" />
-    <state x="421" y="72" key="CommitChangelistDialog2" timestamp="1605771549499">
-      <screen x="0" y="25" width="1920" height="968" />
+    <state x="421" y="72" key="CommitChangelistDialog2" timestamp="1605776143991">
+      <screen x="0" y="25" width="1920" height="966" />
     </state>
+    <state x="421" y="72" key="CommitChangelistDialog2/0.25.1920.966/1920.-13.1920.1055@0.25.1920.966" timestamp="1605776143991" />
     <state x="421" y="72" key="CommitChangelistDialog2/0.25.1920.968/1920.-13.1920.1055@0.25.1920.968" timestamp="1605771549499" />
     <state x="836" y="441" width="540" height="198" key="Github.ShareDialog" timestamp="1605771191935">
       <screen x="0" y="0" width="1920" height="1080" />
