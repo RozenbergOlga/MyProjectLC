@@ -22,7 +22,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d2b2c62-eda1-4f4d-affe-ad9cd2114048" name="Default Changelist" comment="allure report added" />
+    <list default="true" id="8d2b2c62-eda1-4f4d-affe-ad9cd2114048" name="Default Changelist" comment="allure report added">
+      <change afterPath="$PROJECT_DIR$/data/expected.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prettier.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/pageobjects/diaryPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/pageobjects/BasePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/pageobjects/BasePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/pageobjects/loginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/pageobjects/loginPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/pageobjects/profilePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/pageobjects/profilePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/specs/smoke/profilePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/specs/smoke/profilePage.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +47,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="123" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -96,6 +105,7 @@
       <workItem from="1605853509015" duration="7210000" />
       <workItem from="1605861343178" duration="1680000" />
       <workItem from="1605938240845" duration="1700000" />
+      <workItem from="1605984911200" duration="11647000" />
     </task>
     <task id="LOCAL-00001" summary=".gitignore">
       <created>1605771549654</created>
@@ -160,25 +170,25 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="754" y="249" key="Github.UntrackedFilesDialog/0.0.1920.1080/1920.-38.1920.1080@0.0.1920.1080" timestamp="1605771200074" />
-    <state width="1899" height="187" key="GridCell.Tab.0.bottom" timestamp="1605863023672">
+    <state width="1899" height="261" key="GridCell.Tab.0.bottom" timestamp="1606000434981">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="187" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605863023672" />
+    <state width="1899" height="261" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606000434981" />
     <state width="1336" height="249" key="GridCell.Tab.0.bottom/0.25.1920.966/1920.-13.1920.1055@0.25.1920.966" timestamp="1605773086693" />
-    <state width="1899" height="187" key="GridCell.Tab.0.center" timestamp="1605863023672">
+    <state width="1899" height="261" key="GridCell.Tab.0.center" timestamp="1606000434981">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="187" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605863023672" />
+    <state width="1899" height="261" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606000434981" />
     <state width="1336" height="249" key="GridCell.Tab.0.center/0.25.1920.966/1920.-13.1920.1055@0.25.1920.966" timestamp="1605773086692" />
-    <state width="1899" height="187" key="GridCell.Tab.0.left" timestamp="1605863023672">
+    <state width="1899" height="261" key="GridCell.Tab.0.left" timestamp="1606000434981">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="187" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605863023672" />
+    <state width="1899" height="261" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606000434981" />
     <state width="1336" height="249" key="GridCell.Tab.0.left/0.25.1920.966/1920.-13.1920.1055@0.25.1920.966" timestamp="1605773086692" />
-    <state width="1899" height="187" key="GridCell.Tab.0.right" timestamp="1605863023672">
+    <state width="1899" height="261" key="GridCell.Tab.0.right" timestamp="1606000434981">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="187" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605863023672" />
+    <state width="1899" height="261" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606000434981" />
     <state width="1336" height="249" key="GridCell.Tab.0.right/0.25.1920.966/1920.-13.1920.1055@0.25.1920.966" timestamp="1605773086692" />
     <state x="56" y="43" width="1689" height="869" key="MergeDialog" timestamp="1605939302054">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -189,6 +199,10 @@
     </state>
     <state x="652" y="260" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605856293689" />
     <state x="469" y="176" key="SettingsEditor/0.0.1920.1080/1920.-38.1920.1080@0.0.1920.1080" timestamp="1605771092821" />
+    <state width="498" height="451" key="SwitcherDM" timestamp="1605985328916">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="498" height="451" key="SwitcherDM/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1605985328916" />
     <state x="428" y="234" key="Vcs.Push.Dialog.v2" timestamp="1605939494282">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

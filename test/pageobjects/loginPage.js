@@ -13,6 +13,8 @@ class LoginPage extends BasePage {
     return $(".login-form-button");
   }
 
+
+
   login(user, password){
     this.loginEmail.setValue(user);
     this.loginPassword.setValue(password);
