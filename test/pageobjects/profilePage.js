@@ -7,6 +7,13 @@ class ProfilePage extends BasePage{
 
     get createReportBtn(){ return $('[data-qa=dailyReportsBtn]') };
 
+    get dailyReportsLabel() {
+        return $('[data-qa="dailyReports"]');
+    }
+
+    get dailyReportsCounter(){
+        return $('.ml-2')
+    }
 
 }
 export default new ProfilePage();
