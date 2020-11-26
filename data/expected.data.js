@@ -30,7 +30,7 @@ const digits = {
   zero: 0,
   ten: 10,
   zeroText: "0",
-
+  digit: null,
 };
 
 module.exports = { topMenu, profilePage, diaryPage, digits, drawerMenu };

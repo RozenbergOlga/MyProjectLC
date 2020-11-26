@@ -43,8 +43,8 @@ describe('VERIFY THAT DIARY PAGE FOR LEARNER', () => {
       expect(DiaryPage.statTodayDailyReportCount.isDisplayed()).toEqual(true);
     });
 
-    xit('Verify that the field "Today Daily Reports" has a quantity (and not equal zero)', function () {
-      expect(DiaryPage.statTodayDailyReportCount.getValue()).toEqual(digits.zero);
+    it('Verify that the field "Today Daily Reports" has a quantity (and not equal zero)', function () {
+      expect(DiaryPage.statTodayDailyReportCount.getValue()).toEqual(digits.digit);
     });
 
     it('Verify that the field "Total Hours Spent" are present', function () {
@@ -55,8 +55,32 @@ describe('VERIFY THAT DIARY PAGE FOR LEARNER', () => {
       expect(DiaryPage.statTotalHoursSpentCount.isDisplayed()).toEqual(true);
     });
 
-    xit('Verify that the field "Total Hours Spent" has a quantity (and not equal zero)', function () {
-      expect(DiaryPage.statTodayDailyReportCount.getValue()).toEqual(digits.zero);
+    it('Verify that the field "Total Hours Spent" has a quantity (and not equal zero)', function () {
+      expect(DiaryPage.statTodayDailyReportCount.getValue()).toEqual(digits.digit);
     });
+
+    it('Verify that the field "Average Morale Level" are present', function () {
+      expect(DiaryPage.statTotalHoursSpent.getText()).toEqual(diaryPage.statTotalHoursSpent);
+    });
+
+    it('Verify that the field "Average Morale Level" has a quantity', function () {
+      expect(DiaryPage.statTotalHoursSpentCount.isDisplayed()).toEqual(true);
+    });
+
+    it('Verify that the field "Average Morale Level" has a quantity (and not equal zero)', function () {
+      expect(DiaryPage.statTodayDailyReportCount.getValue()).toEqual(digits.digit);
+    });
+
+    it('Verify that the button "Create day report" is present on the page', () => {
+        expect(DiaryPage.createReportBtnDairyPage.isDisplayed()).toEqual(true);
+      });
+
+    it('Verify that the button "Create day report" text = "Create day report"', () => {
+      expect(DiaryPage.createReportBtnDairyPage.getText()).toEqual(profilePage.createBtn);
+    })
+
+    it('Verify that the button "Create day report" is clickable on the page', () => {
+      expect(DiaryPage.createReportBtnDairyPage.isClickable()).toEqual(true);
+    })
   });
 });
