@@ -14,7 +14,7 @@ describe('VERIFY THAT DIARY PAGE FOR LEARNER', () => {
     ProfilePage.topMenuDiaryLearner.click();
   });
 
-  describe('VERIFY THAT THE MAIN ELEMENTS ARE PRESENT ON THE PAGE', function () {
+  describe('VERIFY THAT THE MAIN ELEMENTS ARE PRESENT ON THE PAGE FOR LEARNER', function () {
     it('Verify that url for Dairy page is https://stage.localcoding.us/diary', function () {
       expect(browser.getUrl()).toEqual(diaryPage.diaryUrl);
     });
@@ -44,6 +44,18 @@ describe('VERIFY THAT DIARY PAGE FOR LEARNER', () => {
     });
 
     xit('Verify that the field "Today Daily Reports" has a quantity (and not equal zero)', function () {
+      expect(DiaryPage.statTodayDailyReportCount.getValue()).toEqual(digits.zero);
+    });
+
+    it('Verify that the field "Total Hours Spent" are present', function () {
+      expect(DiaryPage.statTotalHoursSpent.getText()).toEqual(diaryPage.statTotalHoursSpent);
+    });
+
+    it('Verify that the field "Total Hours Spent" has a quantity', function () {
+      expect(DiaryPage.statTotalHoursSpentCount.isDisplayed()).toEqual(true);
+    });
+
+    xit('Verify that the field "Total Hours Spent" has a quantity (and not equal zero)', function () {
       expect(DiaryPage.statTodayDailyReportCount.getValue()).toEqual(digits.zero);
     });
   });

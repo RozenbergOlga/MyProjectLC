@@ -9,6 +9,14 @@ class ProfilePage extends BasePage {
     return $$('.item')[1];
   }
 
+  get chartField() {
+    return $('.ant-col-offset-4');
+  }
+
+  get chartFieldName() {
+    return $$('h5')[1];
+  }
+
   get btnSkip() {
     return $('.text-right');
   }

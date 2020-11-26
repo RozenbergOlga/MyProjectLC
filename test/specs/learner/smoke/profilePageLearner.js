@@ -66,6 +66,16 @@ describe('VERIFY THAT PROFILE PAGE HAS DIARY ELEMENTS', () => {
       expect(ProfilePage.dailyReportsCounter.isDisplayed()).toEqual(true);
     });
 
+    it('Verify that the chart field is present on the page', () => {
+      expect(ProfilePage.chartField.isDisplayed()).toEqual(true);
+    });
+
+    it('Verify that the chart field name is present ', () => {
+      expect(ProfilePage.chartFieldName.isDisplayed()).toEqual(true);
+    });
+
+    it('Verify that the chart field name text = "Daily progress"', () => {
+      expect(ProfilePage.chartFieldName.getText().includes(profilePage.chartFieldNameText)).toEqual(true);
+    });
   });
 });
-

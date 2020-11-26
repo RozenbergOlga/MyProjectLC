@@ -5,6 +5,7 @@ const topMenu = {
 const profilePage = {
   createBtn: 'Create day report',
   dailyReportsLabelText: 'Daily reports',
+  chartFieldNameText: 'Daily progress',
 };
 
 const diaryPage = {
