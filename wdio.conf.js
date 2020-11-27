@@ -25,9 +25,9 @@ exports.config = {
     timeout: 60000,
   },
   afterTest: function (
-    test,
-    context,
-    { error, result, duration, passed, retries }
+      test,
+      context,
+      { error, result, duration, passed, retries }
   ) {
     if (!passed) {
       browser.takeScreenshot();

@@ -32,5 +32,6 @@ class ProfilePage extends BasePage {
   get dailyReportsCounter() {
     return $('.ml-2');
   }
+
 }
 export default new ProfilePage();
