@@ -77,10 +77,18 @@ describe('VERIFY THAT DIARY PAGE FOR LEARNER', () => {
 
     it('Verify that the button "Create day report" text = "Create day report"', () => {
       expect(DiaryPage.createReportBtnDairyPage.getText()).toEqual(profilePage.createBtn);
-    })
+    });
 
     it('Verify that the button "Create day report" is clickable on the page', () => {
       expect(DiaryPage.createReportBtnDairyPage.isClickable()).toEqual(true);
-    })
+    });
+
+    it('Verify that Dairy page has ten reports', () => {
+      expect(DiaryPage.numberReportsOnPage.length).toEqual(digits.ten);
+    });
+
+    it('Verify that the last report becomes the first', () => {
+      expect(DiaryPage.sortedDiaryReportsByTime()).toEqual(true);
+    });
   });
 });
