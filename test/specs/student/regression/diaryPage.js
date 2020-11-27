@@ -87,8 +87,6 @@ describe('VERIFY THAT DIARY PAGE FOR STUDENT ROLE', () => {
             expect(DiaryPage.createReportBtnDairyPage.getText()).toEqual(profilePage.createBtn);
         });
 
-
-
         it('TC-83 Verify that Dairy page has 10 last reports  ', function () {
             expect(DiaryPage.numberReportsOnPage.length).toEqual(digits.ten);
         });
@@ -97,6 +95,7 @@ describe('VERIFY THAT DIARY PAGE FOR STUDENT ROLE', () => {
             expect(DiaryPage.sortedDiaryReportsByTime()).toEqual(true);
         });
     });
+
 
     describe('VERIFY THAT VALUE OF ELEMENTS  ARE CORRECT ON DIARY PAGE', function () {
         it('TC-85 Verify that each reports has its text and its similar to the last report', function () {
