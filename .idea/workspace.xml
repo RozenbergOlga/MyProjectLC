@@ -24,10 +24,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8d2b2c62-eda1-4f4d-affe-ad9cd2114048" name="Default Changelist" comment="allure report added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/pageobjects/reportDrawer.menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/pageobjects/reportDrawer.menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/specs/learner/regression/diaryPageLearner.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/specs/learner/regression/diaryPageLearner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/specs/learner/regression/drawerMenuLearner.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/specs/learner/regression/drawerMenuLearner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/specs/learner/smoke/profilePageLearner.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/specs/learner/smoke/profilePageLearner.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +40,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="11272020" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -288,9 +284,10 @@
     </state>
     <state x="135" y="104" key="MergeDialog/0.23.1440.825@0.23.1440.825" timestamp="1606018318782" />
     <state x="135" y="104" key="MergeDialog/0.23.1440.826@0.23.1440.826" timestamp="1606108501139" />
-    <state x="352" y="127" key="SettingsEditor" timestamp="1606115762141">
-      <screen x="0" y="23" width="1440" height="827" />
+    <state x="375" y="104" key="SettingsEditor" timestamp="1606543773405">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="375" y="104" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1606543773405" />
     <state x="469" y="176" key="SettingsEditor/0.0.1920.1080/1920.-38.1920.1080@0.0.1920.1080" timestamp="1605771092821" />
     <state x="352" y="127" key="SettingsEditor/0.23.1440.826@0.23.1440.826" timestamp="1606114593322" />
     <state x="352" y="127" key="SettingsEditor/0.23.1440.827@0.23.1440.827" timestamp="1606115762141" />
