@@ -67,6 +67,59 @@ class ReportDrawerMenu {
     get RDLJobOffer() {
         return $$('.ant-checkbox-wrapper')[11];
     }
+
+
+
+
+    get RDLINeedHelpCB() {
+        return $$('.ant-checkbox')[0];
+    }
+
+    get RDLIUnderstoodEverythingCB() {
+        return $$('.ant-checkbox')[1];
+    }
+
+    get RDLHelpedClassmatesCB() {
+        return $$('.ant-checkbox')[2];
+    }
+
+    get RDLWatchedLecturesCB() {
+        return $$('.ant-checkbox')[3];
+    }
+
+    get RDLReadCB() {
+        return $$('.ant-checkbox')[4];
+    }
+
+    get RDLCodeCB() {
+        return $$('.ant-checkbox')[5];
+    }
+
+    get RDLQuizCB() {
+        return $$('.ant-checkbox')[6];
+    }
+
+    get RDLInterviewPrepCB() {
+        return $$('.ant-checkbox')[7];
+    }
+
+    get RDLRecruiterCB() {
+        return $$('.ant-checkbox')[8];
+    }
+
+    get RDLInterviewTechCB() {
+        return $$('.ant-checkbox')[9];
+    }
+
+    get RDLInterviewOnsiteCB() {
+        return $$('.ant-checkbox')[10];
+    }
+
+    get RDLJobOfferCB() {
+        return $$('.ant-checkbox')[11];
+    }
+
+
 }
 
 export default new ReportDrawerMenu();
