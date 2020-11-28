@@ -274,6 +274,21 @@ describe('REPORT DRAWER MENU FOR LEARNER', () => {
         });
 
 
+        it("Verify that, for learner, checkbox morale is present", () => {
+            expect(ReportDrawerMenu.RDCBMorale.isDisplayed()).toEqual(true);
+        });
+
+        it("Verify that, for learner, checkbox morale text = 'What is your morale?'", () => {
+            expect(ReportDrawerMenu.RDCBMorale.getText()).toEqual(drawerMenu.checkboxMoraleText);
+        });
+
+        it("Verify that, for learner, checkbox morale subtext is present", () => {
+            expect(ReportDrawerMenu.RDCBMoraleSubTXT.isDisplayed()).toEqual(true);
+        });
+
+        it("Verify that, for learner, checkbox morale subtext = 'From 0 to 10'", () => {
+            expect(ReportDrawerMenu.RDCBMoraleSubTXT.getText()).toEqual(drawerMenu.checkboxMoraleSubText);
+        });
 
 
     });
