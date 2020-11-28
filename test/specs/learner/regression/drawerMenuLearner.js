@@ -60,6 +60,7 @@ describe('REPORT DRAWER MENU FOR LEARNER', () => {
 
 
 
+
         it("Verify that, for learner, menu sub title label 2 'I understood everything' is present", () => {
             expect(ReportDrawerMenu.RDLIUnderstoodEverything.isDisplayed()).toEqual(true);
         });
