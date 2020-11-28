@@ -119,6 +119,14 @@ class ReportDrawerMenu {
         return $$('.ant-checkbox')[11];
     }
 
+    get RDCBMorale() {
+        return $$('.ant-select-selector')[0];
+    }
+
+    get RDCBMoraleSubTXT() {
+        return $$('.ant-form-item-extra')[0];
+    }
+
 
 }
 

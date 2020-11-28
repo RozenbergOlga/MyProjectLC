@@ -38,6 +38,8 @@ const drawerMenu = {
   interviewTech: 'Interview technical screen',
   interviewOnsite: 'Interview onsite',
   jobOffer: 'Got a job offer',
+  checkboxMoraleText: 'What is your morale?',
+  checkboxMoraleSubText: 'From 0 to 10',
 };
 
 const digits = {
