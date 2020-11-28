@@ -44,7 +44,7 @@ describe('VERIFY THAT DIARY PAGE FOR LEARNER', () => {
     });
 
     it('Verify that the field "Today Daily Reports" has a quantity (and not equal zero)', function () {
-      expect(DiaryPage.statTodayDailyReportCount.getValue()).toEqual(digits.digit);
+      expect(DiaryPage.statTodayDailyReportCount.getValue()).not.toEqual(digits.zero);
     });
 
     it('Verify that the field "Total Hours Spent" are present', function () {
@@ -56,7 +56,7 @@ describe('VERIFY THAT DIARY PAGE FOR LEARNER', () => {
     });
 
     it('Verify that the field "Total Hours Spent" has a quantity (and not equal zero)', function () {
-      expect(DiaryPage.statTodayDailyReportCount.getValue()).toEqual(digits.digit);
+      expect(DiaryPage.statTodayDailyReportCount.getValue()).not.toEqual(digits.zero);
     });
 
     it('Verify that the field "Average Morale Level" are present', function () {
@@ -68,7 +68,7 @@ describe('VERIFY THAT DIARY PAGE FOR LEARNER', () => {
     });
 
     it('Verify that the field "Average Morale Level" has a quantity (and not equal zero)', function () {
-      expect(DiaryPage.statTodayDailyReportCount.getValue()).toEqual(digits.digit);
+      expect(DiaryPage.statTodayDailyReportCount.getValue()).not.toEqual(digits.zero);
     });
 
     it('Verify that the button "Create day report" is present on the page', () => {
