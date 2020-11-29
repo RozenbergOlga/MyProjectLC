@@ -40,6 +40,12 @@ const drawerMenu = {
   jobOffer: 'Got a job offer',
   checkboxMoraleText: 'What is your morale?',
   checkboxMoraleSubText: 'From 0 to 10',
+  checkboxHoursText: 'How many hours did you study/practice today?',
+  checkboxHoursSubText: 'From 0 to 10',
+  checkboxDayText: 'How was your day?',
+  checkboxDaySubText: 'Write what is useful for self-development, learning, or practice you did today.' +
+      ' Write what topics you read, what videos you watched or what documentation you read, what tasks you solved or started to solve.' +
+      ' Indicate how much time you have devoted to work. If you had a meeting or interview write about the result.',
 };
 
 const digits = {

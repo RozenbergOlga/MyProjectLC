@@ -1,5 +1,6 @@
 class ReportDrawerMenu {
     //RDL = Report Drawer Label
+    //CB =
     get RDTitle() {
         return $('.ant-drawer-title');
     }
@@ -120,12 +121,33 @@ class ReportDrawerMenu {
     }
 
     get RDCBMorale() {
-        return $$('.ant-select-selector')[0];
+        return $$('.ant-form-item-control-input')[1];
     }
 
     get RDCBMoraleSubTXT() {
         return $$('.ant-form-item-extra')[0];
     }
+
+    get RDCBHours() {
+        return $$('.ant-form-item-control-input')[2];
+    }
+
+    get RDCBHoursSubTXT() {
+        return $$('.ant-form-item-extra')[1];
+    }
+
+    get RDCBDay() {
+        return $$('.ant-form-item-control-input')[3];
+    }
+
+    get RDCBDaySubTXT() {
+        return $$('.ant-form-item-extra')[2];
+    }
+
+    get RDCreateButton() {
+        return $$('.ant-form-item-control-input')[4];
+    }
+
 
 
 }
