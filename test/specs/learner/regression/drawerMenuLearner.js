@@ -291,5 +291,52 @@ describe('REPORT DRAWER MENU FOR LEARNER', () => {
         });
 
 
+        it("Verify that, for learner, checkbox hours is present", () => {
+            expect(ReportDrawerMenu.RDCBHours.isDisplayed()).toEqual(true);
+        });
+
+        it("Verify that, for learner, checkbox hours text is correct", () => {
+            expect(ReportDrawerMenu.RDCBHours.getText()).toEqual(drawerMenu.checkboxHoursText);
+        });
+
+        it("Verify that, for learner, checkbox hours subtext is present", () => {
+            expect(ReportDrawerMenu.RDCBHoursSubTXT.isDisplayed()).toEqual(true);
+        });
+
+        it("Verify that, for learner, checkbox hours subtext = 'From 0 to 10'", () => {
+            expect(ReportDrawerMenu.RDCBHoursSubTXT.getText()).toEqual(drawerMenu.checkboxHoursSubText);
+        });
+
+
+        it("Verify that, for learner, checkbox day is present", () => {
+             expect(ReportDrawerMenu.RDCBDay.isDisplayed()).toEqual(true);
+         });
+
+         // it("Verify that, for learner, checkbox day text is correct", () => {
+         //    expect(ReportDrawerMenu.RDCBDay.getText().includes(drawerMenu.checkboxDayText)).toEqual(true);
+         // });
+
+         it("Verify that, for learner, checkbox day subtext is present", () => {
+            expect(ReportDrawerMenu.RDCBDaySubTXT.isDisplayed()).toEqual(true);
+         });
+
+         it("Verify that, for learner, checkbox day subtext is correct", () => {
+             expect(ReportDrawerMenu.RDCBDaySubTXT.getText()).toEqual(drawerMenu.checkboxDaySubText);
+         });
+
+        it("Verify that, for learner, Create Button  is clickable on the page", () => {
+            expect(ReportDrawerMenu.RDCreateButton.isClickable()).toEqual(true);
+        });
+
+
+
+        it('should fetch menu links and visit each page', () => {
+            const links = $$('.ant-checkbox')
+            links.forEach((link) => {
+                link.click()
+            })
+        })
+
+
     });
 });
