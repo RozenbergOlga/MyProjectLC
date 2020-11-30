@@ -348,7 +348,7 @@ describe('REPORT DRAWER MENU FOR LEARNER', () => {
 
         it('Verify we can select Random Morale', () => {
             ReportDrawerMenu.RDCBMorale.click();
-            ReportDrawerMenu.RDMoraleDropDownMenu[ReportDrawerMenu.RandomCheckbox(0, 9)].click();// need 9
+            ReportDrawerMenu.RDMoraleDropDownMenu[ReportDrawerMenu.RandomCheckbox(0, 9)].click();
             browser.pause(5000)
         })
 
@@ -356,7 +356,7 @@ describe('REPORT DRAWER MENU FOR LEARNER', () => {
 
         it('Verify we can select Random Hours', () => {
             ReportDrawerMenu.RDCBHours.click();
-            ReportDrawerMenu.RDHoursDropDownMenu[ReportDrawerMenu.RandomCheckbox(10, 17)].click();// need 19
+            ReportDrawerMenu.RDHoursDropDownMenu[ReportDrawerMenu.RandomCheckbox(10, 17)].click();
             browser.pause(3000)
         })
 
@@ -365,7 +365,7 @@ describe('REPORT DRAWER MENU FOR LEARNER', () => {
         it(' TC41 Verify that you can input 30 characters in the field "How was your day?"', () => {
             ReportDrawerMenu.RDCBDay.click();
             let string30 = '';
-            for (let i = 0; i <= 30; i++) {
+            for (let i = 0; i <= 31; i++) {
                 string30 += String.fromCharCode(ReportDrawerMenu.RandomCheckbox(31, 300));
             }
             ReportDrawerMenu.RDCBDay.addValue(string30);
@@ -376,27 +376,27 @@ describe('REPORT DRAWER MENU FOR LEARNER', () => {
         it(' TC42 Verify that you could input 300 characters in the field "How was your day?"', () => {
             ReportDrawerMenu.RDCBDay.click();
             let string300 = '';
-            for (let i = 0; i <=300; i++) {
-                string300 += String.fromCharCode(300);
+            for (let i = 0; i <=301; i++) {
+                string300 += String.fromCharCode(ReportDrawerMenu.RandomCheckbox(31, 300));
             }
             ReportDrawerMenu.RDCBDay.setValue(string300);
             const text = ReportDrawerMenu.RDCBDay.getValue();
             expect(text.length).toEqual(string300.length);
         })
 
-        xit('TC43 Verify that you could not input 29 characters in the field "How was your day?"', () => {
+        it('TC43 Verify that you could not input 29 characters in the field "How was your day?"', () => {
 
             ReportDrawerMenu.RDCBDay.click();
             let string29 = '';
-            for (let i = 0; i <= 29; i++) {
+            for (let i = 0; i < 29; i++) {
                 string29 += String.fromCharCode(ReportDrawerMenu.RandomCheckbox(32, 120));
             }
             ReportDrawerMenu.RDCBDay.setValue(string29);
             expect(ReportDrawerMenu.DayAlertText.isDisplayed()).toEqual(true);
         })
 
-        it('TC44 Verify that you could not use copy past for inputing uncorrect numbers of characters ' +
-            '(less then 30) in the field "How was your day?"', () => {
+       // it('TC44 Verify that you could not use copy past for inputing uncorrect numbers of characters ' +
+          //  '(less then 30) in the field "How was your day?"', () => {
             // ReportDrawerMenu.RDDayField.click();
             // let stringLess = '';
             // for (let i = 1; i <= ReportDrawerMenu.RandomCheckbox(1, 29); i++) {
@@ -404,7 +404,7 @@ describe('REPORT DRAWER MENU FOR LEARNER', () => {
             // }
             // ReportDrawerMenu.RDDayField.setValue(stringLess);
             // expect(ReportDrawerMenu.DayAlertText.isDisplayed()).toEqual(true);
-        })
+        //})
     });
 
 
