@@ -124,6 +124,10 @@ class ReportDrawerMenu {
         return $$('.ant-form-item-control-input')[1];
     }
 
+    get RDMoraleDropDownMenu() {
+        return $$('.ant-select-item-option-content')
+    }
+
     get RDCBMoraleSubTXT() {
         return $$('.ant-form-item-extra')[0];
     }
@@ -132,12 +136,16 @@ class ReportDrawerMenu {
         return $$('.ant-form-item-control-input')[2];
     }
 
+    get RDHoursDropDownMenu() {
+        return $$('.ant-select-item-option-content')
+    }
+
     get RDCBHoursSubTXT() {
         return $$('.ant-form-item-extra')[1];
     }
 
     get RDCBDay() {
-        return $$('.ant-form-item-control-input')[3];
+        return $('#description');
     }
 
     get RDCBDaySubTXT() {
@@ -147,6 +155,22 @@ class ReportDrawerMenu {
     get RDCreateButton() {
         return $$('.ant-form-item-control-input')[4];
     }
+
+    get DayAlertText() {
+        return $('.ant-form-item-explain');
+    }
+
+
+    get Checkbox() {
+        return $$('.ant-checkbox');
+    }
+
+    RandomCheckbox (min , max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.ceil(Math.random() * (max - min)) + min;
+    }
+
 
 
 
