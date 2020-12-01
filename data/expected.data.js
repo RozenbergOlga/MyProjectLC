@@ -46,6 +46,7 @@ const drawerMenu = {
   checkboxDaySubText: 'Write what is useful for self-development, learning, or practice you did today.' +
       ' Write what topics you read, what videos you watched or what documentation you read, what tasks you solved or started to solve.' +
       ' Indicate how much time you have devoted to work. If you had a meeting or interview write about the result.',
+  moral10: "10 – I am pleased with everything!",
 };
 
 const digits = {
