@@ -156,6 +156,61 @@ describe('DRAWER MENU', () => {
         expect(ReportDrawerMenu.RDLJobOffer.getText()).toEqual(drawerMenu.jobOffer);
     });
 
+    if('TC-20 Verify that user could choose any one box of "Marks to your daily report"', () => {
+        expect(ReportDrawerMenu.RDLCheckbox.forEach().isClickable()).toEqual(true);
+    });
+
+    if('TC-21 Verify that user could choose several (2-11) boxes of "Marks to your daily report"', () => {
+        for (let i = 0; i <= ReportDrawerMenu.RandomCheckbox(0, 11); i++) {
+                 ReportDrawerMenu.Checkbox[ReportDrawerMenu.RandomCheckbox(0, 11)].click();
+        }
+    });
+
+    if('TC-22 Verify that user could choose all boxes of "Marks to your daily report"', () => {
+        const links = ReportDrawerMenu.Checkbox;
+            links.forEach((el) => {
+                el.click()
+            });
+    });
+
+    if('TC-23.1 Verify that field "What is your morale?" present and has a correct text inside', () => {
+        expect(ReportDrawerMenu.RDCBMorale.isDisplayed()).toEqual(true);
+    });
+
+    if('TC-23.2 Verify that field "What is your morale?" present and has a correct text inside', () => {
+        expect(ReportDrawerMenu.RDCBMorale.getText()).toEqual(drawerMenu.checkboxMoraleText);
+    });
+
+    if('TC-24.1 Verify that field "What is your morale?" has correct added text below field', () => {
+        expect(ReportDrawerMenu.RDCBMoraleSubTXT.isDisplayed()).toEqual(true);
+    });
+
+    if('TC-24.2 Verify that field "What is your morale?" has correct added text below field', () => {
+        expect(ReportDrawerMenu.RDCBMoraleSubTXT.getText()).toEqual(drawerMenu.checkboxMoraleSubText);
+    });
+
+    if('TC-25 Verify that field "What is your morale?" has correct added text below field', () => {
+        expect(ReportDrawerMenu.RDCBMorale.isClickable()).toEqual(true);
+    });
+
+    if('TC-26 Verify that appeared checkbox has value from 0 to 10 when you click om the field "What is your morale?"', () => {
+        expect(ReportDrawerMenu.RDMoraleDropDownMenu.length).toEqual(10); // need 11
+    });
+
+    xif('TC-27 Verify that scrolling works inside checkbox for the field "What is your morale?"', () => {
+
+    });
+
+    if('TC-28 Verify that appeared checkbox has correct text for value 10 when you click om the field "What is your morale?"', () => {
+
+    });
+
+
+
+
+
+
+
 
 
 
