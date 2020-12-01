@@ -8,6 +8,9 @@ class ReportDrawerMenu {
     get RDSubTitle() {
         return $('h6');
     }
+    get RDLCheckbox() {
+        return $$('.ant-checkbox-wrapper');
+    }
 
     get RDLINeedHelp() {
         return $$('.ant-checkbox-wrapper')[0];
