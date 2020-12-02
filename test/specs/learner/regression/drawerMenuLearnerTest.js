@@ -157,7 +157,6 @@ describe('DRAWER MENU', () => {
     });
 
     it('TC-20 Verify that user could choose any one box of "Marks to your daily report"', () => {
-        //expect(ReportDrawerMenu.RDLCheckbox.forEach().isClickable()).toEqual(true);
         ReportDrawerMenu.Checkbox[ReportDrawerMenu.RandomCheckbox(0, 11)].click();
         expect(ReportDrawerMenu.CheckboxChecked[0].isDisplayed()).toEqual(true);
         ReportDrawerMenu.CheckboxChecked[0].click();
@@ -174,14 +173,12 @@ describe('DRAWER MENU', () => {
                 count++;
                 console.log(count);
             }
-             browser.pause(2000)
         }
         expect(ReportDrawerMenu.CheckboxChecked.length).toEqual(count);
         const links = ReportDrawerMenu.CheckboxChecked;
         links.forEach((el) => {
             el.click()
         });
-         browser.pause(2000)
     });
 
     it('TC-22 Verify that user could choose all boxes of "Marks to your daily report"', () => {
@@ -219,12 +216,38 @@ describe('DRAWER MENU', () => {
 
     xit('TC-27 Verify that scrolling works inside checkbox for the field "What is your morale?"', () => {
         ReportDrawerMenu.RDCBMorale.click();
-        expect(ReportDrawerMenu.MoraleScroll.is()).toEqual(true);
+        expect(ReportDrawerMenu.MoraleScroll.isEnabled()).toEqual(true);
         browser.keys("ArrowDown");
     });
 
     xit('TC-28 Verify that appeared checkbox has correct text for value 10 when you click om the field "What is your morale?"', () => {
         expect(ReportDrawerMenu.RDMoraleDropDownMenu[0].getText()).toEqual(drawerMenu.moral10);
     });
+
+    xit('TC-30 Verify that your could choose any one value when click on the field "What is your morale?"', () => {
+        ReportDrawerMenu.RDCBMorale.click();
+        ReportDrawerMenu.RDMoraleDropDownMenu[ReportDrawerMenu.RandomCheckbox(0,8)].click();
+        expect(ReportDrawerMenu.RDCBMoraleNumber.getValue()).toEqual(true);
+    });
+
+
+    it('TC-31.1 Verify that field "How many hours did you study/practice today?" present and has a correct text inside', () => {
+        expect(ReportDrawerMenu.RDCBHours.isDisplayed()).toEqual(true);
+    });
+
+    it('TC-31.2 Verify that field "How many hours did you study/practice today?" present and has a correct text inside', () => {
+        expect(ReportDrawerMenu.RDCBHours.getText()).toEqual(drawerMenu.checkboxHoursText);
+    });
+
+    it('TC-32.1 Verify that field "How many hours did you study/practice today?" has correct added text below field', () => {
+        expect(ReportDrawerMenu.RDCBHoursSubTXT.isDisplayed()).toEqual(true);
+    });
+
+    it('TC-32.2 Verify that field "How many hours did you study/practice today?" has correct added text below field', () => {
+        expect(ReportDrawerMenu.RDCBHoursSubTXT.getText()).toEqual(drawerMenu.checkboxHoursSubText);
+    });
+
+
+
 
 })
