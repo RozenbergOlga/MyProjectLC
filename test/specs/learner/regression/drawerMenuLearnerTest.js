@@ -220,7 +220,7 @@ describe('DRAWER MENU', () => {
         browser.keys("ArrowDown");
     });
 
-    xit('TC-28 Verify that appeared checkbox has correct text for value 10 when you click om the field "What is your morale?"', () => {
+    it('TC-28 Verify that appeared checkbox has correct text for value 10 when you click om the field "What is your morale?"', () => {
         expect(ReportDrawerMenu.RDMoraleDropDownMenu[0].getText()).toEqual(drawerMenu.moral10);
     });
 
@@ -245,6 +245,19 @@ describe('DRAWER MENU', () => {
 
     it('TC-32.2 Verify that field "How many hours did you study/practice today?" has correct added text below field', () => {
         expect(ReportDrawerMenu.RDCBHoursSubTXT.getText()).toEqual(drawerMenu.checkboxHoursSubText);
+    });
+
+    it('TC-33 Verify that field "How many hours did you study/practice today?" is clickable', () => {
+        expect(ReportDrawerMenu.RDCBHours.isClickable()).toEqual(true);
+    });
+
+    it('TC-34 Verify that appeared checkbox has correct value from 0 to 10 when you click om the field "How many hours did you study/practice today?"', () => {
+        ReportDrawerMenu.RDCBHours.click();
+        expect(ReportDrawerMenu.RDHoursDropDownMenu.length).toEqual(20);
+    });
+
+    xit('TC-35 Verify that scrolling works inside checkbox for the field "How many hours did you study/practice today?"', () => {
+
     });
 
 
