@@ -216,16 +216,16 @@ describe('DRAWER MENU', () => {
 
     xit('TC-27 Verify that scrolling works inside checkbox for the field "What is your morale?"', () => {
         ReportDrawerMenu.RDCBMorale.click();
-        expect(ReportDrawerMenu.MoraleScroll.scrollIntoView()).toEqual(true);
-        browser.keys("ArrowDown");
+        expect(ReportDrawerMenu.RDMoraleDropDownMenu.scrollIntoView()).toEqual(true);
+        //browser.keys("ArrowDown");
     });
 
-    it('TC-28 Verify that appeared checkbox has correct text for value 10 when you click om the field "What is your morale?"', () => {
+    xit('TC-28 Verify that appeared checkbox has correct text for value 10 when you click om the field "What is your morale?"', () => {
         expect(ReportDrawerMenu.RDMoraleDropDownMenu[0].getText()).toEqual(drawerMenu.moral10);
     });
 
     xit('TC-29  Verify that appeared checkbox has correct text for value 0 when you click om the field "What is your morale?"', () => {
-        ReportDrawerMenu.RDMoraleDropDownMenu[11].scrollIntoView();
+       expect(ReportDrawerMenu.RDMoraleDropDownMenu[9].getText()).toEqual('0 – I give up');
 
     });
 
@@ -265,6 +265,21 @@ describe('DRAWER MENU', () => {
 
     xit('TC-35 Verify that scrolling works inside checkbox for the field "How many hours did you study/practice today?"', () => {
 
+    });
+
+    xit('TC-36 Verify that your could choose any one value when click on the field "How many hours did you study/practice today?"', () => {
+        ReportDrawerMenu.RDCBHours.click();
+        ReportDrawerMenu.RDHoursDropDownMenu[ReportDrawerMenu.RandomCheckbox(9,18)].click();
+        browser.pause(7000);
+        expect(ReportDrawerMenu.RDCBHours.getText()).toString();
+    });
+
+    it('TC-37.1 Verify that field "How was your day?" present and has a correct text inside', () => {
+        expect(ReportDrawerMenu.RDCBHours.isDisplayed()).toEqual(true);
+    });
+
+    it('TC-37.2 Verify that field "How was your day?" present and has a correct text inside', () => {
+        expect(ReportDrawerMenu.RDCBHours.getText()).toEqual(drawerMenu.checkboxHoursText);
     });
 
 
