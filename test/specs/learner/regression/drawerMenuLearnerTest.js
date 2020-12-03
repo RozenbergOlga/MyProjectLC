@@ -216,7 +216,7 @@ describe('DRAWER MENU', () => {
 
     xit('TC-27 Verify that scrolling works inside checkbox for the field "What is your morale?"', () => {
         ReportDrawerMenu.RDCBMorale.click();
-        expect(ReportDrawerMenu.MoraleScroll.isEnabled()).toEqual(true);
+        expect(ReportDrawerMenu.MoraleScroll.scrollIntoView()).toEqual(true);
         browser.keys("ArrowDown");
     });
 
@@ -224,10 +224,17 @@ describe('DRAWER MENU', () => {
         expect(ReportDrawerMenu.RDMoraleDropDownMenu[0].getText()).toEqual(drawerMenu.moral10);
     });
 
-    xit('TC-30 Verify that your could choose any one value when click on the field "What is your morale?"', () => {
+    xit('TC-29  Verify that appeared checkbox has correct text for value 0 when you click om the field "What is your morale?"', () => {
+        ReportDrawerMenu.RDMoraleDropDownMenu[11].scrollIntoView();
+
+    });
+
+
+    it('TC-30 Verify that your could choose any one value when click on the field "What is your morale?"', () => {
         ReportDrawerMenu.RDCBMorale.click();
         ReportDrawerMenu.RDMoraleDropDownMenu[ReportDrawerMenu.RandomCheckbox(0,8)].click();
-        expect(ReportDrawerMenu.RDCBMoraleNumber.getValue()).toEqual(true);
+        browser.pause(7000);
+        expect(ReportDrawerMenu.RDCBMorale.getText()).toString();
     });
 
 

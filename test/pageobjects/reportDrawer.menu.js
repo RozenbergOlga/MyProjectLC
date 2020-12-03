@@ -127,6 +127,7 @@ class ReportDrawerMenu {
         return $$('.ant-form-item-control-input')[1];
     }
 
+
     get RDCBMoraleNumber() {
         return $$('.ant-select-selection-search')[0];
     }
