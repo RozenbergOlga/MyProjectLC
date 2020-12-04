@@ -323,6 +323,29 @@ describe('DRAWER MENU', () => {
         expect(ReportDrawerMenu.RDDayFieldSubTXT.getText()).toEqual(drawerMenu.dayPlaceholderSubTXT);
     });
 
+    it('TC-39 Verify that field "How was your day?" is clickable', () => {
+        expect(ReportDrawerMenu.RDDayField.isClickable()).toEqual(true);
+    });
+
+    it('TC-40 Verify that you could input correct text un the field "How was your day?"', () => {
+        ReportDrawerMenu.RDDayField.click();
+        const text = "My day today was the best! I did a lot different and interesting thinks. @?<>^";
+        ReportDrawerMenu.RDDayField.addValue( text);
+        expect(ReportDrawerMenu.RDDayField.getValue().length).toEqual(text.length);
+        ReportDrawerMenu.RDDayField.clearValue();
+    });
+
+    it('TC-41 Verify that you could input 30 characters in the field "How was your day?"', () => {
+        ReportDrawerMenu.RDDayField.click();
+        let string30 = '';
+        for (let i = 1; i <= 30; i++) {
+          string30 += String.fromCharCode(ReportDrawerMenu.RandomInt(32, 120));
+        }
+        ReportDrawerMenu.RDDayField.addValue(string30);
+        const text = ReportDrawerMenu.RDDayField.getValue();
+        expect(text.length).toEqual(string30.length);
+    });
+
 
 
 
