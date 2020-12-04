@@ -38,15 +38,19 @@ const drawerMenu = {
   interviewTech: 'Interview technical screen',
   interviewOnsite: 'Interview onsite',
   jobOffer: 'Got a job offer',
-  checkboxMoraleText: 'What is your morale?',
-  checkboxMoraleSubText: 'From 0 to 10',
-  checkboxHoursText: 'How many hours did you study/practice today?',
-  checkboxHoursSubText: 'From 0 to 10',
-  checkboxDayText: 'How was your day?',
-  checkboxDaySubText: 'Write what is useful for self-development, learning, or practice you did today.' +
+  moralePlaceholder: 'What is your morale?',
+  moralePlaceholderSubTXT: 'From 0 to 10',
+  moral10: "10 – I am pleased with everything!",
+  hoursPlaceholder: 'How many hours did you study/practice today?',
+  hoursPlaceholderSubTXT: 'From 0 to 10',
+  dayPlaceholder: 'How was your day?',
+  dayPlaceholderSubTXT: 'Write what is useful for self-development, learning, or practice you did today.' +
       ' Write what topics you read, what videos you watched or what documentation you read, what tasks you solved or started to solve.' +
       ' Indicate how much time you have devoted to work. If you had a meeting or interview write about the result.',
-  moral10: "10 – I am pleased with everything!",
+
+  createBtn: 'Create',
+  dayAlert: '\'description\' must be at least 30 characters',
+
 };
 
 const digits = {
