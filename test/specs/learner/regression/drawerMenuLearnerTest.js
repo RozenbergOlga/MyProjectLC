@@ -172,7 +172,6 @@ describe('DRAWER MENU', () => {
     it('TC-20 Verify that user could choose any one box of "Marks to your daily report"', () => {
         let r = ReportDrawerMenu.RandomInt(0, 11)
         ReportDrawerMenu.Checkbox[r].click();
-        //expect(ReportDrawerMenu.CheckboxChecked[0].isDisplayed()).toEqual(true);
         expect(ReportDrawerMenu.Checkbox[r].getAttribute('class').includes('ant-checkbox-checked')).toEqual(true);
 
         ReportDrawerMenu.CheckboxChecked[0].click();
@@ -187,14 +186,12 @@ describe('DRAWER MENU', () => {
                 count++;
                 console.log(count);
             }
-            // browser.pause(2000)
         }
         expect(ReportDrawerMenu.CheckboxChecked.length).toEqual(count);
         const links = ReportDrawerMenu.CheckboxChecked;
         links.forEach((el) => {
             el.click()
         });
-        //  browser.pause(2000)
     });
 
 
@@ -235,7 +232,6 @@ describe('DRAWER MENU', () => {
 
     it('TC-27 Verify that scrolling works inside checkbox for the field "What is your morale?"', () => {
         ReportDrawerMenu.RDMoraleField.click();
-        //ReportDrawerMenu.RDMoraleDropDownMenu[1].moveTo();
         ReportDrawerMenu.RDMoraleDropDownMenu[9].scrollIntoView();
         expect(ReportDrawerMenu.RDMoraleDropDownMenu[9].isDisplayed()).toEqual(true);
     });
@@ -243,24 +239,26 @@ describe('DRAWER MENU', () => {
     it('TC-28 Verify that appeared checkbox has correct text for value 10 when you click on the field "What is your morale?"', () => {
         browser.keys("Escape");
         ProfilePage.createReportBtn.click();
-
         ReportDrawerMenu.RDMoraleField.click();
         ReportDrawerMenu.RDMoraleDropDownMenu[0].waitForDisplayed();
-        //browser.pause(2000);
         expect(ReportDrawerMenu.RDMoraleDropDownMenu[0].getText()).toEqual(drawerMenu.moral10);
     });
 
 
-    // xit('TC-29  Verify that appeared checkbox has correct text for value 0 when you click om the field "What is your morale?""', () => {
-    //     expect(ReportDrawerMenu.RDMoraleDropDownMenu[0].getText()).toEqual(drawerMenu.moral10);
-    // });
+    xit('TC-29  Verify that appeared checkbox has correct text for value 0 when you click om the field "What is your morale?""', () => {
+        ReportDrawerMenu.RDHoursField.clearValue();
+        browser.keys("Escape");
+        ProfilePage.createReportBtn.click();
+        ReportDrawerMenu.RDHoursField.click();
+        ReportDrawerMenu.RDMoraleDropDownMenu[8].waitForDisplayed();
+        expect(ReportDrawerMenu.RDMoraleDropDownMenu[8].getText()).toEqual(drawerMenu.moral0);
+     });
 
     it('TC-30 Verify that your could choose any one value when click on the field "What is your morale?"', () => {
         let random = ReportDrawerMenu.RandomInt(0, 7);
-        let moralTXT = ReportDrawerMenu.RDMoraleDropDownMenu[random].getText()
-        console.log('*******************' + moralTXT);
+        let textMorale = ReportDrawerMenu.RDMoraleDropDownMenu[random].getText()
         ReportDrawerMenu.RDMoraleDropDownMenu[random].click();
-        expect(ReportDrawerMenu.MoraleSelect.getAttribute('title').includes(moralTXT)).toEqual(true);
+        expect(ReportDrawerMenu.MoraleSelect.getAttribute('title').includes(textMorale)).toEqual(true);
 
     });
 
@@ -290,22 +288,12 @@ describe('DRAWER MENU', () => {
     //
     // });
 
-     // it('TC-36 Verify that your could choose any one value when click on the field "How many hours did you study/practice today?"', () => {
-     //     let random1 = ReportDrawerMenu.RandomInt(0, 7);
-     //     let moralTXT = ReportDrawerMenu.RDMoraleDropDownMenu[random1].getText()
-     //     console.log('*******************' + moralTXT);
-     //     ReportDrawerMenu.RDMoraleDropDownMenu[random1].click();
-     //     expect(ReportDrawerMenu.MoraleSelect.getAttribute('title').includes(moralTXT)).toEqual(true);
-     //
-     //
-     //
-     //
-
-         // ReportDrawerMenu.RDHoursField.click();
-         // ReportDrawerMenu.RDHoursDropDownMenu[ReportDrawerMenu.RandomCheckbox(9,18)].click();
-         // //browser.pause(7000);
-         // expect(ReportDrawerMenu.RDHoursField.getText()).toString();
-     //});
+     xit('TC-36 Verify that your could choose any one value when click on the field "How many hours did you study/practice today?"', () => {
+         let random1 = ReportDrawerMenu.RandomInt(10, 17);
+         let textHours = ReportDrawerMenu.RDMoraleDropDownMenu[random1].getText()
+         ReportDrawerMenu.RDMoraleDropDownMenu[random1].click();
+         expect(ReportDrawerMenu.MoraleSelect.getAttribute('title').includes(textHours)).toEqual(true);
+     });
 
     it('TC-37.1 Verify that field "How was your day?" present and has a correct text inside', () => {
         expect(ReportDrawerMenu.RDDayField.isDisplayed()).toEqual(true);
@@ -344,6 +332,27 @@ describe('DRAWER MENU', () => {
         ReportDrawerMenu.RDDayField.addValue(string30);
         const text = ReportDrawerMenu.RDDayField.getValue();
         expect(text.length).toEqual(string30.length);
+    });
+
+    it('TC-42 Verify that you could input 300 characters in the field "How was your day?"', () => {
+        ReportDrawerMenu.RDDayField.click();
+       let string300 = '';
+       for (let i = 0; i <300; i++) {
+         string300 += String.fromCharCode(ReportDrawerMenu.RandomInt(32, 120));
+       }
+       ReportDrawerMenu.RDDayField.setValue(string300);
+       const text = ReportDrawerMenu.RDDayField.getValue();
+       expect(text.length).toEqual(string300.length);
+    });
+
+    it('TC-43 Verify that you could not input 29 characters in the field "How was your day?"', () => {
+        ReportDrawerMenu.RDDayField.click();
+       let string29 = '';
+       for (let i = 1; i <= 29; i++) {
+         string29 += String.fromCharCode(ReportDrawerMenu.RandomInt(32, 120));
+       }
+       ReportDrawerMenu.RDDayField.setValue(string29);
+       expect(ReportDrawerMenu.DayAlertText.isDisplayed()).toEqual(false);
     });
 
 
