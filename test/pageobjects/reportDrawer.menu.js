@@ -2,6 +2,10 @@ class ReportDrawerMenu {
     //RDL = Report Drawer Label
     //CB = Check Box
 
+    get XButton() {
+        return $('.anticon-close');
+    }
+
     get CloseBTN() {
         $('.ant-drawer-close');
     }
@@ -156,6 +160,22 @@ class ReportDrawerMenu {
 
     get DayAlertText() {
         return $('.ant-form-item-explain');
+    }
+
+    get CheckBoxAlertText() {
+        return $$('.ant-form-item-explain')[0];
+    }
+
+    get MoraleAlertText() {
+        return $$('.ant-form-item-explain')[1];
+    }
+
+    get HoursAlertText() {
+        return $$('.ant-form-item-explain')[2];
+    }
+
+    get DayBoxAlertText() {
+        return $$('.ant-form-item-explain')[3];
     }
 
     get CreateBtn() {
