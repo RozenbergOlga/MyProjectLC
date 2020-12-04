@@ -352,7 +352,67 @@ describe('DRAWER MENU', () => {
          string29 += String.fromCharCode(ReportDrawerMenu.RandomInt(32, 120));
        }
        ReportDrawerMenu.RDDayField.setValue(string29);
-       expect(ReportDrawerMenu.DayAlertText.isDisplayed()).toEqual(false);
+       browser.pause(2000);
+       expect(ReportDrawerMenu.DayAlertText.isDisplayed()).toEqual(true);
+    });
+
+    xit('TC-44 Verify that you could not use copy past for inputing uncorrect numbers of characters ' +
+        '(less then 30) in the field "How was your day?"', () => {
+
+        ncp.copy('some text', function () {
+                ReportDrawerMenu.RDDayField
+            }
+        )
+    });
+
+    it('TC-45.1 Verify that btn Create is presented on the page and title is correct', () => {
+        expect(ReportDrawerMenu.CreateBtn.isDisplayed()).toEqual(true);
+    });
+
+    it('TC-45.2 Verify that btn Create is presented on the page and title is correct', () => {
+        expect(ReportDrawerMenu.CreateBtn.getText()).toEqual(drawerMenu.createBtn);
+    });
+
+    it('TC-46 Verify that btn Create is clickable', () => {
+        expect(ReportDrawerMenu.CreateBtn.isClickable()).toEqual(true);
+    });
+
+    it('TC-47 Verify that btn "X" is presented on the page', () => {
+        expect(ReportDrawerMenu.XButton.isDisplayed()).toEqual(true);
+    });
+
+    it('TC-48 Verify that btn "X" is clickable', () => {
+        expect(ReportDrawerMenu.XButton.isClickable()).toEqual(true);
+    });
+
+    it('TC-49 Verify that Create day report has disappeared when click "X" btn', () => {
+        ReportDrawerMenu.XButton.click();
+        expect(ReportDrawerMenu.RDTitle.isDisplayed()).toEqual(false);
+    });
+
+    xit('TC-50 Verify that btn Create unclickable when no one field was chosen', () => {
+        expect(ReportDrawerMenu.CreateBtn.isClickable()).toEqual(true);
+    });
+
+    it('TC-51.1 Verify that errors message are appeared when no one field was chosen and click btn Create', () => {
+        browser.keys("Escape");
+        ProfilePage.createReportBtn.click();
+        ReportDrawerMenu.CreateBtn.click();
+
+        browser.pause(7000)
+        expect(ReportDrawerMenu.CheckBoxAlertText.isDisplayed()).toEqual(true);
+    });
+
+    it('TC-51.2 Verify that errors message are appeared when no one field was chosen and click btn Create', () => {
+        expect(ReportDrawerMenu.MoraleAlertText.isDisplayed()).toEqual(true);
+    });
+
+    it('TC-51.3 Verify that errors message are appeared when no one field was chosen and click btn Create', () => {
+        expect(ReportDrawerMenu.HoursAlertText.isDisplayed()).toEqual(true);
+    });
+
+    it('TC-51.4 Verify that errors message are appeared when no one field was chosen and click btn Create', () => {
+        expect(ReportDrawerMenu.DayBoxAlertText.isDisplayed()).toEqual(true);
     });
 
 
