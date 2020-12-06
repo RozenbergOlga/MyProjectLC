@@ -415,7 +415,7 @@ describe('DRAWER MENU', () => {
         expect(ReportDrawerMenu.DayBoxAlertText.isDisplayed()).toEqual(true);
     });
 
-    it('TC-52 Verify that btn Create unclickable when checkbox "Marks to your daily report" wasn\'t chosen', () => {
+    xit('TC-52 Verify that btn Create unclickable when checkbox "Marks to your daily report" wasn\'t chosen', () => {
         browser.keys("Escape");
         ProfilePage.createReportBtn.click();
         ReportDrawerMenu.RDMoraleDropDownMenu[ReportDrawerMenu.RandomInt(0,7)].click();
@@ -424,6 +424,16 @@ describe('DRAWER MENU', () => {
         ReportDrawerMenu.CB.click();
         expect(ReportDrawerMenu.CheckBoxAlertText.isDisplayed()).toEqual(true);
     });
+
+    it('TC-53 Verify that error message has appeared when you click btn Create and checkbox "Marks to your daily report" wasn\'t chosen', () => {
+        browser.keys("Escape");
+        ProfilePage.createReportBtn.click();
+        ReportDrawerMenu.RDMoraleDropDownMenu[ReportDrawerMenu.RandomInt(0,7)].click();
+        ReportDrawerMenu.RDHoursDropDownMenu[11].click();
+        ReportDrawerMenu.RDDayField.addValue("My day today was the best! I am happy!");
+        ReportDrawerMenu.CB.click();
+        expect(ReportDrawerMenu.CheckBoxAlertText.isDisplayed()).toEqual(true);
+    })
 
 
 
