@@ -390,30 +390,21 @@ describe('DRAWER MENU', () => {
         expect(ReportDrawerMenu.RDTitle.isDisplayed()).toEqual(false);
     });
 
-    xit('TC-50 Verify that btn Create unclickable when no one field was chosen', () => {
+    it('TC-50 Verify that btn Create unclickable when no one field was chosen', () => {
+        ProfilePage.createReportBtn.click();
+        ReportDrawerMenu.CreateBtn.waitForDisplayed();
         expect(ReportDrawerMenu.CreateBtn.isClickable()).toEqual(true);
+
     });
 
     xit('TC-51.1 Verify that errors message are appeared when no one field was chosen and click btn Create', () => {
         browser.keys("Escape");
         ProfilePage.createReportBtn.click();
+        ReportDrawerMenu.CreateBtn.scrollIntoView();
         ReportDrawerMenu.CreateBtn.click();
-
-        browser.pause(7000)
         expect(ReportDrawerMenu.CheckBoxAlertText.isDisplayed()).toEqual(true);
     });
 
-    xit('TC-51.2 Verify that errors message are appeared when no one field was chosen and click btn Create', () => {
-        expect(ReportDrawerMenu.MoraleAlertText.isDisplayed()).toEqual(true);
-    });
-
-    xit('TC-51.3 Verify that errors message are appeared when no one field was chosen and click btn Create', () => {
-        expect(ReportDrawerMenu.HoursAlertText.isDisplayed()).toEqual(true);
-    });
-
-    xit('TC-51.4 Verify that errors message are appeared when no one field was chosen and click btn Create', () => {
-        expect(ReportDrawerMenu.DayBoxAlertText.isDisplayed()).toEqual(true);
-    });
 
     xit('TC-52 Verify that btn Create unclickable when checkbox "Marks to your daily report" wasn\'t chosen', () => {
         browser.keys("Escape");
@@ -428,12 +419,35 @@ describe('DRAWER MENU', () => {
     it('TC-53 Verify that error message has appeared when you click btn Create and checkbox "Marks to your daily report" wasn\'t chosen', () => {
         browser.keys("Escape");
         ProfilePage.createReportBtn.click();
-        ReportDrawerMenu.RDMoraleDropDownMenu[ReportDrawerMenu.RandomInt(0,7)].click();
-        ReportDrawerMenu.RDHoursDropDownMenu[11].click();
-        ReportDrawerMenu.RDDayField.addValue("My day today was the best! I am happy!");
-        ReportDrawerMenu.CB.click();
-        expect(ReportDrawerMenu.CheckBoxAlertText.isDisplayed()).toEqual(true);
-    })
+        ReportDrawerMenu.RDMoraleField.click();
+        ReportDrawerMenu.RDMoraleDropDownMenu[ReportDrawerMenu.RandomInt(0, 7)].click();// need 9
+        ReportDrawerMenu.RDHoursField.click();
+        ReportDrawerMenu.RDHoursDropDownMenu[ReportDrawerMenu.RandomInt(10, 17)].click();// need 19
+        ReportDrawerMenu.RDDayField.click();
+        ReportDrawerMenu.RDDayField.setValue('My day today was the best! I am happy!');
+        ReportDrawerMenu.CreateBtn.click();
+        expect(ReportDrawerMenu.CheckBoxAlertText.isDisplayed()).toEqual(false);
+    });
+
+    xit('Verify that report is created ', () => {
+        for (let i = 0; i < ReportDrawerMenu.Checkbox.length; i++) {
+            ReportDrawerMenu.Checkbox[ReportDrawerMenu.RandomInt(0, 11)].click()
+        }
+        ReportDrawerMenu.RDMoraleField.click();
+        ReportDrawerMenu.RDMoraleDropDownMenu[ReportDrawerMenu.RandomInt(0, 7)].click();// need 9
+
+        ReportDrawerMenu.RDHoursField.click();
+        ReportDrawerMenu.RDHoursDropDownMenu[ReportDrawerMenu.RandomInt(10, 17)].click();// need 19
+
+        ReportDrawerMenu.RDDayField.click();
+        ReportDrawerMenu.RDDayField.setValue('first 11112222233334444555666777');
+
+        ReportDrawerMenu.CreateBtn.click();
+        browser.pause(10000)
+        //expect(text).toEqual(drawerMenu.dayAlert);
+    });
+
+
 
 
 
