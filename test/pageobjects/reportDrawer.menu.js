@@ -162,6 +162,11 @@ class ReportDrawerMenu {
         return $('.ant-form-item-explain');
     }
 
+    get AlertText() {
+        return $$('.ant-form-item-explain')[0];
+    }
+
+
     get CheckBoxAlertText() {
         return $$('.ant-form-item-explain')[0];
     }
