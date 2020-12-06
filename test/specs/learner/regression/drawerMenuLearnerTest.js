@@ -394,7 +394,7 @@ describe('DRAWER MENU', () => {
         expect(ReportDrawerMenu.CreateBtn.isClickable()).toEqual(true);
     });
 
-    it('TC-51.1 Verify that errors message are appeared when no one field was chosen and click btn Create', () => {
+    xit('TC-51.1 Verify that errors message are appeared when no one field was chosen and click btn Create', () => {
         browser.keys("Escape");
         ProfilePage.createReportBtn.click();
         ReportDrawerMenu.CreateBtn.click();
@@ -403,17 +403,29 @@ describe('DRAWER MENU', () => {
         expect(ReportDrawerMenu.CheckBoxAlertText.isDisplayed()).toEqual(true);
     });
 
-    it('TC-51.2 Verify that errors message are appeared when no one field was chosen and click btn Create', () => {
+    xit('TC-51.2 Verify that errors message are appeared when no one field was chosen and click btn Create', () => {
         expect(ReportDrawerMenu.MoraleAlertText.isDisplayed()).toEqual(true);
     });
 
-    it('TC-51.3 Verify that errors message are appeared when no one field was chosen and click btn Create', () => {
+    xit('TC-51.3 Verify that errors message are appeared when no one field was chosen and click btn Create', () => {
         expect(ReportDrawerMenu.HoursAlertText.isDisplayed()).toEqual(true);
     });
 
-    it('TC-51.4 Verify that errors message are appeared when no one field was chosen and click btn Create', () => {
+    xit('TC-51.4 Verify that errors message are appeared when no one field was chosen and click btn Create', () => {
         expect(ReportDrawerMenu.DayBoxAlertText.isDisplayed()).toEqual(true);
     });
+
+    it('TC-52 Verify that btn Create unclickable when checkbox "Marks to your daily report" wasn\'t chosen', () => {
+        browser.keys("Escape");
+        ProfilePage.createReportBtn.click();
+        ReportDrawerMenu.RDMoraleDropDownMenu[ReportDrawerMenu.RandomInt(0,7)].click();
+        ReportDrawerMenu.RDHoursDropDownMenu[11].click();
+        ReportDrawerMenu.RDDayField.addValue("My day today was the best! I am happy!");
+        ReportDrawerMenu.CB.click();
+        expect(ReportDrawerMenu.CheckBoxAlertText.isDisplayed()).toEqual(true);
+    });
+
+
 
 
 
