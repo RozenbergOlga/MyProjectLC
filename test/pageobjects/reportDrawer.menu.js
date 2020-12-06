@@ -182,6 +182,13 @@ class ReportDrawerMenu {
         return $$('.ant-btn.ant-btn-primary')[2];
     }
 
+    get CB() {
+        return $$('.ant-form-item-control-input-content')[4];
+    }
+
+
+
+
     get Checkbox() {
         return $$('.ant-checkbox');
     }
