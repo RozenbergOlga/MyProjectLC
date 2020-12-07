@@ -413,6 +413,7 @@ describe('DRAWER MENU', () => {
         expect(ReportDrawerMenu.MoraleAlertText.isDisplayed()).toEqual(true);
     });
 
+
     it('TC-51.3 Verify that errors message are appeared when no one field was chosen and click btn Create', () => {
         browser.deleteAllCookies();
         ReportDrawerMenu.CreateBtn.scrollIntoView();
@@ -442,6 +443,7 @@ describe('DRAWER MENU', () => {
         ReportDrawerMenu.CreateBtn.click();
         browser.pause(2000)
         expect(ReportDrawerMenu.CheckBoxAlertText.isDisplayed()).toEqual(true);
+
     });
 
     xit('TC-53 Verify that error message has appeared when you click btn Create and checkbox "Marks to your daily report" wasn\'t chosen', () => {
@@ -455,6 +457,19 @@ describe('DRAWER MENU', () => {
         ReportDrawerMenu.RDDayField.setValue('My day today was the best! I am happy!');
         ReportDrawerMenu.CreateBtn.click();
         expect(ReportDrawerMenu.CheckBoxAlertText.isDisplayed()).toEqual();
+    });
+
+    it('TC-54 Verify that btn Create unclickable when field "What is your morale?" wasn\'t chosen', () => {
+        ProfilePage.createReportBtn.click();
+        for (let i = 0; i < ReportDrawerMenu.Checkbox.length; i++) {
+            ReportDrawerMenu.Checkbox[ReportDrawerMenu.RandomInt(0, 11)].click()
+        };
+        ReportDrawerMenu.RDHoursField.click();
+        ReportDrawerMenu.RDHoursDropDownMenu[ReportDrawerMenu.RandomInt(10, 17)].click();// need 19
+        ReportDrawerMenu.RDDayField.click();
+        ReportDrawerMenu.RDDayField.setValue('My day today was the best! I am happy!');
+        ReportDrawerMenu.CreateBtn.click();
+        expect(ReportDrawerMenu.CheckBoxAlertText.isDisplayed()).toEqual(false);
     });
 
     xit('Verify that report is created ', () => {
