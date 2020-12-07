@@ -407,13 +407,10 @@ describe('DRAWER MENU', () => {
 
 
     xit('TC-52 Verify that btn Create unclickable when checkbox "Marks to your daily report" wasn\'t chosen', () => {
-        browser.keys("Escape");
+        ReportDrawerMenu.XButton.click();
         ProfilePage.createReportBtn.click();
-        ReportDrawerMenu.RDMoraleDropDownMenu[ReportDrawerMenu.RandomInt(0,7)].click();
-        ReportDrawerMenu.RDHoursDropDownMenu[11].click();
-        ReportDrawerMenu.RDDayField.addValue("My day today was the best! I am happy!");
-        ReportDrawerMenu.CB.click();
-        expect(ReportDrawerMenu.CheckBoxAlertText.isDisplayed()).toEqual(true);
+        ReportDrawerMenu.CreateBtn.waitForDisplayed();
+        expect(ReportDrawerMenu.CreateBtn.isClickable()).toEqual(false);
     });
 
     it('TC-53 Verify that error message has appeared when you click btn Create and checkbox "Marks to your daily report" wasn\'t chosen', () => {
@@ -421,6 +418,19 @@ describe('DRAWER MENU', () => {
         ProfilePage.createReportBtn.click();
         ReportDrawerMenu.RDMoraleField.click();
         ReportDrawerMenu.RDMoraleDropDownMenu[ReportDrawerMenu.RandomInt(0, 7)].click();// need 9
+        ReportDrawerMenu.RDHoursField.click();
+        ReportDrawerMenu.RDHoursDropDownMenu[ReportDrawerMenu.RandomInt(10, 17)].click();// need 19
+        ReportDrawerMenu.RDDayField.click();
+        ReportDrawerMenu.RDDayField.setValue('My day today was the best! I am happy!');
+        ReportDrawerMenu.CreateBtn.click();
+        expect(ReportDrawerMenu.CheckBoxAlertText.isDisplayed()).toEqual(false);
+    });
+
+    it('TC-54 Verify that btn Create unclickable when field "What is your morale?" wasn\'t chosen', () => {
+        ProfilePage.createReportBtn.click();
+        for (let i = 0; i < ReportDrawerMenu.Checkbox.length; i++) {
+            ReportDrawerMenu.Checkbox[ReportDrawerMenu.RandomInt(0, 11)].click()
+        };
         ReportDrawerMenu.RDHoursField.click();
         ReportDrawerMenu.RDHoursDropDownMenu[ReportDrawerMenu.RandomInt(10, 17)].click();// need 19
         ReportDrawerMenu.RDDayField.click();
