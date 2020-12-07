@@ -397,23 +397,41 @@ describe('DRAWER MENU', () => {
 
     });
 
-    xit('TC-51.1 Verify that errors message are appeared when no one field was chosen and click btn Create', () => {
-        browser.keys("Escape");
-        ProfilePage.createReportBtn.click();
+    it('TC-51.1 Verify that errors message are appeared when no one field was chosen and click btn Create', () => {
+        browser.deleteAllCookies();
         ReportDrawerMenu.CreateBtn.scrollIntoView();
         ReportDrawerMenu.CreateBtn.click();
+        //browser.pause(5000);
         expect(ReportDrawerMenu.CheckBoxAlertText.isDisplayed()).toEqual(true);
     });
 
-
-    xit('TC-52 Verify that btn Create unclickable when checkbox "Marks to your daily report" wasn\'t chosen', () => {
-        ReportDrawerMenu.XButton.click();
-        ProfilePage.createReportBtn.click();
-        ReportDrawerMenu.CreateBtn.waitForDisplayed();
-        expect(ReportDrawerMenu.CreateBtn.isClickable()).toEqual(false);
+    it('TC-51.2 Verify that errors message are appeared when no one field was chosen and click btn Create', () => {
+        browser.deleteAllCookies();
+        ReportDrawerMenu.CreateBtn.scrollIntoView();
+        ReportDrawerMenu.CreateBtn.click();
+        //browser.pause(5000);
+        expect(ReportDrawerMenu.MoraleAlertText.isDisplayed()).toEqual(true);
     });
 
-    it('TC-53 Verify that error message has appeared when you click btn Create and checkbox "Marks to your daily report" wasn\'t chosen', () => {
+
+    it('TC-51.3 Verify that errors message are appeared when no one field was chosen and click btn Create', () => {
+        browser.deleteAllCookies();
+        ReportDrawerMenu.CreateBtn.scrollIntoView();
+        ReportDrawerMenu.CreateBtn.click();
+        //browser.pause(5000);
+        expect(ReportDrawerMenu.DayAlertText.isDisplayed()).toEqual(true);
+    });
+
+    it('TC-51.4 Verify that errors message are appeared when no one field was chosen and click btn Create', () => {
+        browser.deleteAllCookies();
+        ReportDrawerMenu.CreateBtn.scrollIntoView();
+        ReportDrawerMenu.CreateBtn.click();
+        //browser.pause(5000);
+        expect(ReportDrawerMenu.HoursAlertText.isDisplayed()).toEqual(true);
+    });
+
+
+    it('TC-52 Verify that btn Create unclickable when checkbox "Marks to your daily report" wasn\'t chosen', () => {
         browser.keys("Escape");
         ProfilePage.createReportBtn.click();
         ReportDrawerMenu.RDMoraleField.click();
@@ -423,7 +441,22 @@ describe('DRAWER MENU', () => {
         ReportDrawerMenu.RDDayField.click();
         ReportDrawerMenu.RDDayField.setValue('My day today was the best! I am happy!');
         ReportDrawerMenu.CreateBtn.click();
-        expect(ReportDrawerMenu.CheckBoxAlertText.isDisplayed()).toEqual(false);
+        browser.pause(2000)
+        expect(ReportDrawerMenu.CheckBoxAlertText.isDisplayed()).toEqual(true);
+
+    });
+
+    xit('TC-53 Verify that error message has appeared when you click btn Create and checkbox "Marks to your daily report" wasn\'t chosen', () => {
+        browser.keys("Escape");
+        ProfilePage.createReportBtn.click();
+        ReportDrawerMenu.RDMoraleField.click();
+        ReportDrawerMenu.RDMoraleDropDownMenu[ReportDrawerMenu.RandomInt(0, 7)].click();// need 9
+        ReportDrawerMenu.RDHoursField.click();
+        ReportDrawerMenu.RDHoursDropDownMenu[ReportDrawerMenu.RandomInt(10, 17)].click();// need 19
+        ReportDrawerMenu.RDDayField.click();
+        ReportDrawerMenu.RDDayField.setValue('My day today was the best! I am happy!');
+        ReportDrawerMenu.CreateBtn.click();
+        expect(ReportDrawerMenu.CheckBoxAlertText.isDisplayed()).toEqual();
     });
 
     it('TC-54 Verify that btn Create unclickable when field "What is your morale?" wasn\'t chosen', () => {

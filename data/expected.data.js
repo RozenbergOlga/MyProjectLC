@@ -51,6 +51,7 @@ const drawerMenu = {
 
   createBtn: 'Create',
   dayAlert: '\'description\' must be at least 30 characters',
+  alertText: 'This field is required!',
 
 };
 
