@@ -446,6 +446,66 @@ describe('DRAWER MENU', () => {
 
     });
 
+    it('TC-53 Verify that error message has appeared when you click btn Create and checkbox "Marks to your daily report" wasn\'t chosen', () => {
+        ReportDrawerMenu.CreateBtn.scrollIntoView();
+        ReportDrawerMenu.CreateBtn.click();
+        browser.pause(5000);
+        expect(ReportDrawerMenu.CheckBoxAlertText.isDisplayed()).toEqual(true);
+    });
+
+    it('TC-54 Verify that btn Create unclickable when field "What is your morale?" wasn\'t chosen', () => {
+        ReportDrawerMenu.XButton.click();
+        ProfilePage.createReportBtn.click();
+        ReportDrawerMenu.CreateBtn.waitForDisplayed();
+        expect(ReportDrawerMenu.CreateBtn.isClickable()).toEqual(true
+        );
+    });
+    it('TC-55 Verify that error message has appeared when you click btn Create and checkbox "What is your morale?" wasn\'t chosen', () => {
+        ReportDrawerMenu.CreateBtn.scrollIntoView();
+        ReportDrawerMenu.CreateBtn.click();
+        browser.pause(5000);
+        expect(ReportDrawerMenu.MoraleAlertText.isDisplayed()).toEqual(true);
+    });
+    xit('TC-56 Verify that btn Create unclickable when field "How many hours did you study/practice today?" wasn\'t chosen', () => {
+        ReportDrawerMenu.XButton.click();
+        ProfilePage.createReportBtn.click();
+        ReportDrawerMenu.CreateBtn.waitForDisplayed();
+        expect(ReportDrawerMenu.CreateBtn.isClickable()).toEqual(false);
+    });
+    xit('TC-57 Verify that error message has appeared when you click btn Create and checkbox "How many hours did you study/practice today?" wasn\'t chosen', () => {
+        ReportDrawerMenu.CreateBtn.scrollIntoView();
+        ReportDrawerMenu.CreateBtn.click();
+        browser.pause(5000);
+        expect(ReportDrawerMenu.DayAlertText[2].isDisplayed()).toEqual(true);
+    });
+    xit('TC-58 Verify that btn Create unclickable when field "How was your day?" empty', () => {
+        ReportDrawerMenu.XButton.click();
+        ProfilePage.createReportBtn.click();
+        ReportDrawerMenu.CreateBtn.waitForDisplayed();
+        expect(ReportDrawerMenu.CreateBtn.isClickable()).toEqual(false);
+    });
+    xit('TC-59 Verify that error message has appeared when you click btn Create and checkbox "How was your day?" wasn\'t chosen', () => {
+        ReportDrawerMenu.CreateBtn.scrollIntoView();
+        ReportDrawerMenu.CreateBtn.click();
+        browser.pause(5000);
+        expect(ReportDrawerMenu.DayAlertText[3].isDisplayed()).toEqual(true);
+    });
+    xit('TC-60 Verify that Refrash page works', () => {
+        ReportDrawerMenu.RDDayField.click();
+        let string300 = '';
+        for (let i = 0; i < 300; i++) {
+            string300 += String.fromCharCode(ReportDrawerMenu.RandomInt(32, 120));
+        }
+        ReportDrawerMenu.RDDayField.setValue(string300);
+        const text = ReportDrawerMenu.RDDayField.getValue();
+        browser.refresh();
+        // expect(browser.url).toEqual('https://stage.localcoding.us/profile/5fb766de3ed01e006ad30217');
+    });
+
+
+
+
+
     xit('TC-53 Verify that error message has appeared when you click btn Create and checkbox "Marks to your daily report" wasn\'t chosen', () => {
         browser.keys("Escape");
         ProfilePage.createReportBtn.click();
@@ -459,7 +519,7 @@ describe('DRAWER MENU', () => {
         expect(ReportDrawerMenu.CheckBoxAlertText.isDisplayed()).toEqual();
     });
 
-    it('TC-54 Verify that btn Create unclickable when field "What is your morale?" wasn\'t chosen', () => {
+    xit('TC-54 Verify that btn Create unclickable when field "What is your morale?" wasn\'t chosen', () => {
         ProfilePage.createReportBtn.click();
         for (let i = 0; i < ReportDrawerMenu.Checkbox.length; i++) {
             ReportDrawerMenu.Checkbox[ReportDrawerMenu.RandomInt(0, 11)].click()
@@ -469,7 +529,7 @@ describe('DRAWER MENU', () => {
         ReportDrawerMenu.RDDayField.click();
         ReportDrawerMenu.RDDayField.setValue('My day today was the best! I am happy!');
         ReportDrawerMenu.CreateBtn.click();
-        expect(ReportDrawerMenu.CheckBoxAlertText.isDisplayed()).toEqual(false);
+        expect(ReportDrawerMenu.MoraleAlertText.isDisplayed()).toEqual(false);
     });
 
     xit('Verify that report is created ', () => {
