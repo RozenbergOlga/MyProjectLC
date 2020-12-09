@@ -6,6 +6,7 @@ const profilePage = {
   createBtn: 'Create day report',
   dailyReportsLabelText: 'Daily reports',
   chartFieldNameText: 'Daily progress',
+  diagramTitleTXT: 'Daily progress',
 };
 
 const diaryPage = {
