@@ -486,7 +486,7 @@ describe('DRAWER MENU', () => {
         ReportDrawerMenu.XButton.click();
         ProfilePage.createReportBtn.click();
         ReportDrawerMenu.CreateBtn.waitForDisplayed();
-        expect(ReportDrawerMenu.CreateBtn.isClickable()).toEqual(false);
+        expect(ReportDrawerMenu.CreateBtn.isClickable()).toEqual(true);
 
     });
 
@@ -494,7 +494,8 @@ describe('DRAWER MENU', () => {
         ReportDrawerMenu.CreateBtn.scrollIntoView();
         ReportDrawerMenu.CreateBtn.click();
 
-        expect(ReportDrawerMenu.DayAlertText.isDisplayed()).toEqual(true);
+        expect(ReportDrawerMenu.DayAlertText.isDisplayed()).toEqual(true
+        );
 
 
     });
