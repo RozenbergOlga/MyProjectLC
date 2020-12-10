@@ -510,7 +510,7 @@ describe('DRAWER MENU', () => {
 
     });
 
-    it('TC-61 Verify that icons from choosen checkbox "Marks to your daily report" displayed correctly when Day report was created with all choosen box', () => {
+    xit('TC-61 Verify that icons from choosen checkbox "Marks to your daily report" displayed correctly when Day report was created with all choosen box', () => {
 
         //browser.keys("Escape");
         ProfilePage.createReportBtn.click();
@@ -535,7 +535,7 @@ describe('DRAWER MENU', () => {
         expect(ProfilePage.reportCheckBox.length).toEqual(12);
     });
 
-    it ('TC-62 Verify that icons from choosen checkbox "Marks to your daily report" displayed correctly when Day report was created with 5 choosen box', () => {
+    xit ('TC-62 Verify that icons from choosen checkbox "Marks to your daily report" displayed correctly when Day report was created with 5 choosen box', () => {
 
         ProfilePage.createReportBtn.click();
 
@@ -590,10 +590,10 @@ describe('DRAWER MENU', () => {
 
     });
 
-    // it('TC-72.4 Verify that the Like button is clickable on each daily report and title correct', () => {
-    //
-    //
-    // });
+    it('TC-72.4 Verify that the Like button is clickable on each daily report and title correct', () => {
+        expect(ProfilePage.likeButton.length).toEqual(116);
+
+    });
 
 
 
