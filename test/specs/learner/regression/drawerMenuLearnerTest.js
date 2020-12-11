@@ -494,8 +494,7 @@ describe('DRAWER MENU', () => {
         ReportDrawerMenu.CreateBtn.scrollIntoView();
         ReportDrawerMenu.CreateBtn.click();
 
-        expect(ReportDrawerMenu.DayAlertText.isDisplayed()).toEqual(true
-        );
+        expect(ReportDrawerMenu.DayAlertText.isDisplayed()).toEqual(false);
 
 
     });
@@ -567,6 +566,16 @@ describe('DRAWER MENU', () => {
 
     });
 
+    it('TC-65 Verify that the date of the last daily report similar to the last date in diagram', () => {
+
+        const d = new Date(ProfilePage.lastReportProfPage.getText())
+        let day = d.getDate();
+        let month = d.getMonth()
+        let lastDate = (month + 1 + "." + day);
+        expect(ProfilePage.lastReportDiagram.getText()).toEqual(lastDate);
+
+    });
+
 
 
 
@@ -591,7 +600,7 @@ describe('DRAWER MENU', () => {
     });
 
     it('TC-72.4 Verify that the Like button is clickable on each daily report and title correct', () => {
-        expect(ProfilePage.likeButton.length).toEqual(116);
+        expect(ProfilePage.likeButton.length).toEqual(129);
 
     });
 
