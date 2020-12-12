@@ -206,6 +206,10 @@ class ReportDrawerMenu {
         return $('.ant-select-selection-item');
     }
 
+    get HoursSelect() {
+        return $$('.ant-select-selection-item')[1];
+    }
+
 
     RandomInt (min, max) {
         min = Math.ceil(min);

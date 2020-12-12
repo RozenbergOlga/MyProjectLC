@@ -576,6 +576,52 @@ describe('DRAWER MENU', () => {
 
     });
 
+    it('TC-66-67 Verify that the quantity of hours of the morale level /last daily report similar to the last quantity of hours in diagram', () => {
+
+        browser.maximizeWindow();
+        ProfilePage.createReportBtn.click();
+
+        browser.pause(2000);
+        ReportDrawerMenu.Checkbox[3].click()
+
+        ReportDrawerMenu.RDMoraleField.click();
+        ReportDrawerMenu.RDMoraleDropDownMenu[1].click();// must be 9
+
+        let moraleLevel = ReportDrawerMenu.MoraleSelect.getText();
+
+        ReportDrawerMenu.RDHoursField.click();
+        ReportDrawerMenu.RDHoursDropDownMenu[15].click();// must be 5
+        let hoursLevel = ReportDrawerMenu.HoursSelect.getText();
+
+        ReportDrawerMenu.RDDayField.click();
+        ReportDrawerMenu.RDDayField.setValue('TC-67 Verify that the quantity of hours of the last daily');
+
+        ReportDrawerMenu.CreateBtn.click();
+        browser.pause(2000);
+
+        let strDiagram = ProfilePage.reportStrDiagram.getAttribute('d');
+        console.log('***************************'+ typeof(strDiagram) + strDiagram);
+        let arrDiagram = strDiagram.split(',');
+        let x = (arrDiagram[arrDiagram.length - 2] - 66);
+        let y = arrDiagram[arrDiagram.length - 1];
+
+        console.log('x =  ' + x);
+        console.log('y =  ' + y);
+
+        ProfilePage.chartTooltipLine.moveTo({xOffset: x, yOffset: +y });
+        browser.pause(5000);
+
+        let textMorale = ProfilePage.chartTextMorale.getText();
+        let textHours = ProfilePage.chartTextHours.getText();
+        console.log("@@@@@@@@@@@@@@@@@@@@@@ textMorale  @@@@@@@@@@------ " + textMorale);
+        console.log("@@@@@@@@@@@@@@@@@@@@@@  textHours  @@@@@@@@@@@------ " + textHours);
+
+        expect(textMorale.includes(moraleLevel)).toEqual(true);
+        expect(textHours.includes(hoursLevel)).toEqual(true);
+
+
+    });
+
 
 
 

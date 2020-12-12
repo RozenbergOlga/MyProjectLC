@@ -54,10 +54,6 @@ class ProfilePage extends BasePage {
     return  $('hr')
   }
 
-  get likeButton(){
-    return $$('//span[contains(text(),"Like")]');
-  }
-
   get lastReportDiagram(){
     return $$('.recharts-cartesian-axis-tick-value')[14]
   }
@@ -77,6 +73,23 @@ class ProfilePage extends BasePage {
   get likeButton(){
     return $$('//span[contains(text(),"Like")]');
   }
+
+  get reportStrDiagram(){
+    return $(".recharts-curve.recharts-line-curve")
+  }
+
+  get chartTooltipLine() {
+    return $(".recharts-layer.recharts-line");
+  }
+
+  get chartTextMorale() {
+    return $$(".recharts-tooltip-item")[1];
+  }
+
+  get chartTextHours() {
+    return $$(".recharts-tooltip-item")[0];
+  }
+
 
 
 
