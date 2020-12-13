@@ -622,9 +622,6 @@ describe('DRAWER MENU', () => {
 
     });
 
-
-
-
     it('TC-71 Verify that each daily report separates by the line', () => {
         expect(ProfilePage.line.isDisplayed()).toEqual(true);
 
