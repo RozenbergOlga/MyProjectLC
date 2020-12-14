@@ -415,14 +415,12 @@ describe('DRAWER MENU', () => {
     browser.pause(2000);
     expect(ReportDrawerMenu.CheckBoxAlertText.isDisplayed()).toEqual(true);
   });
-
   it('TC-53 Verify that error message has appeared when you click btn Create and checkbox "Marks to your daily report" wasn\'t chosen', () => {
     ReportDrawerMenu.CreateBtn.scrollIntoView();
     ReportDrawerMenu.CreateBtn.click();
     browser.pause(5000);
     expect(ReportDrawerMenu.CheckBoxAlertText.isDisplayed()).toEqual(true);
   });
-
   it('TC-54 Verify that btn Create unclickable when field "What is your morale?" wasn\'t chosen', () => {
     ReportDrawerMenu.XButton.click();
     ProfilePage.createReportBtn.click();
@@ -586,7 +584,7 @@ describe('DRAWER MENU', () => {
   it('TC-72.3 Verify that the Like button  title is correct', () => {
     expect(ProfilePage.likeButton[0].getText()).toEqual(profilePage.likeButtonTXT);
   });
-  it('TC-72.4 Verify that the Like button is clickable on each daily report and title correct', () => {
+  xit('TC-72.4 Verify that the Like button is clickable on each daily report and title correct', () => {
     expect(ProfilePage.likeButton.length).toEqual(129);
   });
 
