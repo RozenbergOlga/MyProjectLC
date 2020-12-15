@@ -578,12 +578,15 @@ describe('DRAWER MENU', () => {
   it('TC-72.1 Verify that the Like button is displayed on  daily report ', () => {
     expect(ProfilePage.likeButton[0].isDisplayed()).toEqual(true);
   });
+
   it('TC-72.2 Verify that the Like button is clickable on  daily report ', () => {
     expect(ProfilePage.likeButton[0].isClickable()).toEqual(true);
   });
+
   it('TC-72.3 Verify that the Like button  title is correct', () => {
     expect(ProfilePage.likeButton[0].getText()).toEqual(profilePage.likeButtonTXT);
   });
+
   xit('TC-72.4 Verify that the Like button is clickable on each daily report and title correct', () => {
     expect(ProfilePage.likeButton.length).toEqual(129);
   });
