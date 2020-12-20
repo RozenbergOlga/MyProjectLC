@@ -593,6 +593,15 @@ describe('DRAWER MENU', () => {
     expect(ProfilePage.likeButton.length).toEqual(129);
   });
 
+  it('TC-72.3 Verify that the Like button  title is correct', () => {
+    expect(ProfilePage.likeButton[0].getText()).toEqual(profilePage.likeButtonTXT);
+
+  });
+
+
+
+
+
   xit('Verify that report is created ', () => {
     for (let i = 0; i < ReportDrawerMenu.Checkbox.length; i++) {
       ReportDrawerMenu.Checkbox[ReportDrawerMenu.RandomInt(0, 11)].click();
