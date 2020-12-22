@@ -320,6 +320,7 @@ describe('DRAWER MENU', () => {
     const text = ReportDrawerMenu.RDDayField.getValue();
     expect(text.length).toEqual(string300.length);
   });
+
   it('TC-43 Verify that you could not input 29 characters in the field "How was your day?"', () => {
     ReportDrawerMenu.RDDayField.click();
     let string29 = '';
@@ -330,6 +331,7 @@ describe('DRAWER MENU', () => {
     browser.pause(2000);
     expect(ReportDrawerMenu.DayAlertText.isDisplayed()).toEqual(true);
   });
+
   xit(
     'TC-44 Verify that you could not use copy past for inputing uncorrect numbers of characters ' +
       '(less then 30) in the field "How was your day?"',
@@ -339,18 +341,23 @@ describe('DRAWER MENU', () => {
       });
     },
   );
+
   it('TC-45.1 Verify that btn Create is presented on the page and title is correct', () => {
     expect(ReportDrawerMenu.CreateBtn.isDisplayed()).toEqual(true);
   });
+
   it('TC-45.2 Verify that btn Create is presented on the page and title is correct', () => {
     expect(ReportDrawerMenu.CreateBtn.getText()).toEqual(drawerMenu.createBtn);
   });
+
   it('TC-46 Verify that btn Create is clickable', () => {
     expect(ReportDrawerMenu.CreateBtn.isClickable()).toEqual(true);
   });
+
   it('TC-47 Verify that btn "X" is presented on the page', () => {
     expect(ReportDrawerMenu.XButton.isDisplayed()).toEqual(true);
   });
+
   it('TC-48 Verify that btn "X" is clickable', () => {
     expect(ReportDrawerMenu.XButton.isClickable()).toEqual(true);
   });
