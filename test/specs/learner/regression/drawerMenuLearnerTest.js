@@ -535,7 +535,6 @@ describe('DRAWER MENU', () => {
     let lastDate = month + 1 + '.' + day;
     expect(ProfilePage.lastReportDiagram.getText()).toEqual(lastDate);
   });
-
   it('TC-66-67 Verify that the quantity of hours of the morale level /last daily report similar to the last quantity of hours in diagram', () => {
     browser.maximizeWindow();
     ProfilePage.createReportBtn.click();
@@ -578,36 +577,24 @@ describe('DRAWER MENU', () => {
     expect(textMorale.includes(moraleLevel)).toEqual(true);
     expect(textHours.includes(hoursLevel)).toEqual(true);
   });
-
   it('TC-71 Verify that each daily report separates by the line', () => {
     expect(ProfilePage.line.isDisplayed()).toEqual(true);
   });
-
   it('TC-72.1 Verify that the Like button is displayed on  daily report ', () => {
     expect(ProfilePage.likeButton[0].isDisplayed()).toEqual(true);
   });
-
   it('TC-72.2 Verify that the Like button is clickable on  daily report ', () => {
     expect(ProfilePage.likeButton[0].isClickable()).toEqual(true);
   });
-
   it('TC-72.3 Verify that the Like button  title is correct', () => {
     expect(ProfilePage.likeButton[0].getText()).toEqual(profilePage.likeButtonTXT);
   });
-
   xit('TC-72.4 Verify that the Like button is clickable on each daily report and title correct', () => {
     expect(ProfilePage.likeButton.length).toEqual(129);
   });
-
   it('TC-72.3 Verify that the Like button  title is correct', () => {
     expect(ProfilePage.likeButton[0].getText()).toEqual(profilePage.likeButtonTXT);
-
   });
-
-
-
-
-
   xit('Verify that report is created ', () => {
     for (let i = 0; i < ReportDrawerMenu.Checkbox.length; i++) {
       ReportDrawerMenu.Checkbox[ReportDrawerMenu.RandomInt(0, 11)].click();
