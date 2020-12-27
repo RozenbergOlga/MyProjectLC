@@ -261,12 +261,6 @@ describe('DRAWER MENU', () => {
     ReportDrawerMenu.RDHoursFieldSubTXT.click();
     expect(ReportDrawerMenu.RDHoursDropDownMenu.length).toEqual(10); // need 11
   });
-
-  // it('TC-35 Verify that scrolling works inside checkbox for the field "How many hours did you study/practice today?"', () => {
-  //
-  //
-  // });
-
   xit('TC-36 Verify that your could choose any one value when click on the field "How many hours did you study/practice today?"', () => {
     let random1 = ReportDrawerMenu.RandomInt(10, 17);
     let textHours = ReportDrawerMenu.RDMoraleDropDownMenu[random1].getText();
