@@ -390,7 +390,6 @@ describe('DRAWER MENU', () => {
     //browser.pause(5000);
     expect(ReportDrawerMenu.DayAlertText.isDisplayed()).toEqual(true);
   });
-
   it('TC-51.4 Verify that errors message are appeared when no one field was chosen and click btn Create', () => {
     browser.deleteAllCookies();
     ReportDrawerMenu.CreateBtn.scrollIntoView();
@@ -398,7 +397,6 @@ describe('DRAWER MENU', () => {
     //browser.pause(5000);
     expect(ReportDrawerMenu.HoursAlertText.isDisplayed()).toEqual(true);
   });
-
   it('TC-52 Verify that btn Create unclickable when checkbox "Marks to your daily report" wasn\'t chosen', () => {
     browser.keys('Escape');
     ProfilePage.createReportBtn.click();
@@ -412,28 +410,24 @@ describe('DRAWER MENU', () => {
     browser.pause(2000);
     expect(ReportDrawerMenu.CheckBoxAlertText.isDisplayed()).toEqual(true);
   });
-
   it('TC-53 Verify that error message has appeared when you click btn Create and checkbox "Marks to your daily report" wasn\'t chosen', () => {
     ReportDrawerMenu.CreateBtn.scrollIntoView();
     ReportDrawerMenu.CreateBtn.click();
     browser.pause(5000);
     expect(ReportDrawerMenu.CheckBoxAlertText.isDisplayed()).toEqual(true);
   });
-
   it('TC-54 Verify that btn Create unclickable when field "What is your morale?" wasn\'t chosen', () => {
     ReportDrawerMenu.XButton.click();
     ProfilePage.createReportBtn.click();
     ReportDrawerMenu.CreateBtn.waitForDisplayed();
     expect(ReportDrawerMenu.CreateBtn.isClickable()).toEqual(true);
   });
-
   it('TC-55 Verify that error message has appeared when you click btn Create and checkbox "What is your morale?" wasn\'t chosen', () => {
     ReportDrawerMenu.CreateBtn.scrollIntoView();
     ReportDrawerMenu.CreateBtn.click();
     browser.pause(5000);
     expect(ReportDrawerMenu.MoraleAlertText.isDisplayed()).toEqual(true);
   });
-
   it('TC-56 Verify that btn Create unclickable when field "How many hours did you study/practice today?" wasn\'t chosen', () => {
     ReportDrawerMenu.XButton.click();
     ProfilePage.createReportBtn.click();
