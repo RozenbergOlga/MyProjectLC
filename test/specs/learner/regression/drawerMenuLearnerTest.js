@@ -289,6 +289,7 @@ describe('DRAWER MENU', () => {
   it('TC-39 Verify that field "How was your day?" is clickable', () => {
     expect(ReportDrawerMenu.RDDayField.isClickable()).toEqual(true);
   });
+
   it('TC-40 Verify that you could input correct text un the field "How was your day?"', () => {
     ReportDrawerMenu.RDDayField.click();
     const text = 'My day today was the best! I did a lot different and interesting thinks. @?<>^';
@@ -296,6 +297,7 @@ describe('DRAWER MENU', () => {
     expect(ReportDrawerMenu.RDDayField.getValue().length).toEqual(text.length);
     ReportDrawerMenu.RDDayField.clearValue();
   });
+
   it('TC-41 Verify that you could input 30 characters in the field "How was your day?"', () => {
     ReportDrawerMenu.RDDayField.click();
     let string30 = '';
@@ -306,6 +308,7 @@ describe('DRAWER MENU', () => {
     const text = ReportDrawerMenu.RDDayField.getValue();
     expect(text.length).toEqual(string30.length);
   });
+
   it('TC-42 Verify that you could input 300 characters in the field "How was your day?"', () => {
     ReportDrawerMenu.RDDayField.click();
     let string300 = '';
