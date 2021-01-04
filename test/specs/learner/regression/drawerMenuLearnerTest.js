@@ -344,34 +344,27 @@ describe('DRAWER MENU', () => {
   it('TC-45.1 Verify that btn Create is presented on the page and title is correct', () => {
     expect(ReportDrawerMenu.CreateBtn.isDisplayed()).toEqual(true);
   });
-
   it('TC-45.2 Verify that btn Create is presented on the page and title is correct', () => {
     expect(ReportDrawerMenu.CreateBtn.getText()).toEqual(drawerMenu.createBtn);
   });
-
   it('TC-46 Verify that btn Create is clickable', () => {
     expect(ReportDrawerMenu.CreateBtn.isClickable()).toEqual(true);
   });
-
   it('TC-47 Verify that btn "X" is presented on the page', () => {
     expect(ReportDrawerMenu.XButton.isDisplayed()).toEqual(true);
   });
-
   it('TC-48 Verify that btn "X" is clickable', () => {
     expect(ReportDrawerMenu.XButton.isClickable()).toEqual(true);
   });
-
   it('TC-49 Verify that Create day report has disappeared when click "X" btn', () => {
     ReportDrawerMenu.XButton.click();
     expect(ReportDrawerMenu.RDTitle.isDisplayed()).toEqual(false);
   });
-
   it('TC-50 Verify that btn Create unclickable when no one field was chosen', () => {
     ProfilePage.createReportBtn.click();
     ReportDrawerMenu.CreateBtn.waitForDisplayed();
     expect(ReportDrawerMenu.CreateBtn.isClickable()).toEqual(true);
   });
-
   it('TC-51.1 Verify that errors message are appeared when no one field was chosen and click btn Create', () => {
     browser.deleteAllCookies();
     ReportDrawerMenu.CreateBtn.scrollIntoView();
@@ -379,7 +372,6 @@ describe('DRAWER MENU', () => {
     //browser.pause(5000);
     expect(ReportDrawerMenu.CheckBoxAlertText.isDisplayed()).toEqual(true);
   });
-
   it('TC-51.2 Verify that errors message are appeared when no one field was chosen and click btn Create', () => {
     browser.deleteAllCookies();
     ReportDrawerMenu.CreateBtn.scrollIntoView();
@@ -387,7 +379,6 @@ describe('DRAWER MENU', () => {
     //browser.pause(5000);
     expect(ReportDrawerMenu.MoraleAlertText.isDisplayed()).toEqual(true);
   });
-
   it('TC-51.3 Verify that errors message are appeared when no one field was chosen and click btn Create', () => {
     browser.deleteAllCookies();
     ReportDrawerMenu.CreateBtn.scrollIntoView();
