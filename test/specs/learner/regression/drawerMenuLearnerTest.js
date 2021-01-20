@@ -438,42 +438,36 @@ describe('DRAWER MENU', () => {
     browser.pause(5000);
     expect(ReportDrawerMenu.MoraleAlertText.isDisplayed()).toEqual(true);
   });
-
   it('TC-56 Verify that btn Create unclickable when field "How many hours did you study/practice today?" wasn\'t chosen', () => {
     ReportDrawerMenu.XButton.click();
     ProfilePage.createReportBtn.click();
     ReportDrawerMenu.CreateBtn.waitForDisplayed();
     expect(ReportDrawerMenu.CreateBtn.isClickable()).toEqual(true);
   });
-
   it('TC-57 Verify that error message has appeared when you click btn Create and checkbox "How many hours did you study/practice today?" wasn\'t chosen', () => {
     ReportDrawerMenu.CreateBtn.scrollIntoView();
     ReportDrawerMenu.CreateBtn.click();
 
     expect(ReportDrawerMenu.DayAlertText.isDisplayed()).toEqual(true);
   });
-
   it('TC-58 Verify that btn Create unclickable when field "How was your day?" empty', () => {
     ReportDrawerMenu.XButton.click();
     ProfilePage.createReportBtn.click();
     ReportDrawerMenu.CreateBtn.waitForDisplayed();
     expect(ReportDrawerMenu.CreateBtn.isClickable()).toEqual(true);
   });
-
   it('TC-59 Verify that error message has appeared when you click btn Create and checkbox "How was your day?" wasn\'t chosen', () => {
     ReportDrawerMenu.CreateBtn.scrollIntoView();
     ReportDrawerMenu.CreateBtn.click();
 
     expect(ReportDrawerMenu.DayAlertText.isDisplayed()).toEqual(false);
   });
-
   it('TC-60 Verify that Refrash page works', () => {
     browser.refresh();
     ProfilePage.profileName.waitForDisplayed();
     expect(ProfilePage.profileName.isDisplayed()).toEqual(true);
     // expect(browser.url).toEqual('https://stage.localcoding.us/profile/5fb766de3ed01e006ad30217');
   });
-
   xit('TC-61 Verify that icons from choosen checkbox "Marks to your daily report" displayed correctly when Day report was created with all choosen box', () => {
     //browser.keys("Escape");
     ProfilePage.createReportBtn.click();
