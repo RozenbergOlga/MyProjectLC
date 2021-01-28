@@ -30,43 +30,33 @@ describe('DRAWER MENU', () => {
   it('TC-6.1 Verify that checkbox "Marks to your daily report" is present', () => {
     expect(ReportDrawerMenu.RDSubTitle.isDisplayed()).toEqual(true);
   });
-
   it('TC-6.2 Verify that checkbox "Marks to your daily report" has right title', () => {
     expect(ReportDrawerMenu.RDSubTitle.getText()).toEqual(drawerMenu.subTitle);
   });
-
   it('TC-7 Verify that checkbox "Marks to your daily report" has correct number of boxes = 12', () => {
     expect(ReportDrawerMenu.Checkbox.length).toEqual(12);
   });
-
   it('TC-8.1 Verify that checkbox "Marks to your daily report" has correct title for box 1', () => {
     expect(ReportDrawerMenu.RDLINeedHelp.isDisplayed()).toEqual(true);
   });
-
   it('TC-8.2 Verify that checkbox "Marks to your daily report" has correct title for box 1', () => {
     expect(ReportDrawerMenu.RDLINeedHelp.getText().includes(drawerMenu.iNeedHelp)).toEqual(true);
   });
-
   it('TC-8.3 Verify that checkbox "Marks to your daily report" has correct title for box 1', () => {
     expect(ReportDrawerMenu.RDLINeedHelpSubTXT.isDisplayed()).toEqual(true);
   });
-
   it('TC-8.4 Verify that checkbox "Marks to your daily report" has correct title for box 1', () => {
     expect(ReportDrawerMenu.RDLINeedHelpSubTXT.getText()).toEqual(drawerMenu.iNeedHelpSubTXT);
   });
-
   it('TC-9.1 Verify that checkbox "Marks to your daily report" has correct title for box 2', () => {
     expect(ReportDrawerMenu.RDLIUnderstoodEverything.isDisplayed()).toEqual(true);
   });
-
   it('TC-9.2 Verify that checkbox "Marks to your daily report" has correct title for box 2', () => {
     expect(ReportDrawerMenu.RDLIUnderstoodEverything.getText().includes(drawerMenu.understood)).toEqual(true);
   });
-
   it('TC-9.3 Verify that checkbox "Marks to your daily report" has correct title for box 2', () => {
     expect(ReportDrawerMenu.RDLIUnderstoodEverythingSubTXT.isDisplayed()).toEqual(true);
   });
-
   it('TC-9.4 Verify that checkbox "Marks to your daily report" has correct title for box 2', () => {
     expect(ReportDrawerMenu.RDLIUnderstoodEverythingSubTXT.getText()).toEqual(drawerMenu.understoodSubTXT);
   });
