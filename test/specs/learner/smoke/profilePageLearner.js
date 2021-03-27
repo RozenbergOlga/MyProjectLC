@@ -33,7 +33,8 @@ describe('VERIFY THAT PROFILE PAGE HAS DIARY ELEMENTS', () => {
   });
 
   describe('VERIFY THAT PROFILE PAGE HAS DIARY ELEMENTS IN DOM FOR LEARNER', () => {
-    before(() => {
+
+      before(() => {
       LoginPage.open();
       browser.maximizeWindow();
       browser.deleteAllCookies();
@@ -49,9 +50,9 @@ describe('VERIFY THAT PROFILE PAGE HAS DIARY ELEMENTS', () => {
       expect(ProfilePage.createReportBtn.isClickable()).toEqual(true);
     });
 
-    // it("Verify that create day report button text = 'Create day report' on profile page", () => {
-    //   expect(ProfilePage.createReportBtn.getText()).toEqual(profilePage.createBtn);
-    //  });
+     it("Verify that create day report button text = 'Create day report' on profile page", () => {
+       expect(ProfilePage.createReportBtn.getText()).toEqual(profilePage.createBtn);
+     });
 
      it('Verify that label Daily reports  exist on profile page ', () => {
          expect(ProfilePage.dailyReportsLabel.isDisplayed()).toEqual(true);
@@ -76,5 +77,7 @@ describe('VERIFY THAT PROFILE PAGE HAS DIARY ELEMENTS', () => {
      it('Verify that the chart field name text = "Daily progress"', () => {
  expect(ProfilePage.chartFieldName.getText().includes(profilePage.chartFieldNameText)).toEqual(true);
      });
+
      });
- });
+
+});
