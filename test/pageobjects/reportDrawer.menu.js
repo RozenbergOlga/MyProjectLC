@@ -1,7 +1,6 @@
 class ReportDrawerMenu {
     //RDL = Report Drawer Label
     //CB = Check Box
-
     get XButton() {
         return $('.anticon-close');
     }
