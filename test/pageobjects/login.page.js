@@ -15,6 +15,7 @@ class LoginPage extends BasePage {
   }
 
   login(user, password) {
+
     this.loginEmail.setValue(user);
     this.loginPassword.setValue(password);
     this.loginButton.click();
