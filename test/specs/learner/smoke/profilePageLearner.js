@@ -46,27 +46,35 @@ describe('VERIFY THAT PROFILE PAGE HAS DIARY ELEMENTS', () => {
     it('Verify that create day report button exist on profile page', () => {
       expect(ProfilePage.createReportBtn.isDisplayed()).toEqual(true);
     });
+
     it('Verify that create day report button is clickable on profile page', () => {
       expect(ProfilePage.createReportBtn.isClickable()).toEqual(true);
     });
+
     it("Verify that create day report button text = 'Create day report' on profile page", () => {
        expect(ProfilePage.createReportBtn.getText()).toEqual(profilePage.createBtn);
      });
+
     it('Verify that label Daily reports  exist on profile page ', () => {
          expect(ProfilePage.dailyReportsLabel.isDisplayed()).toEqual(true);
      });
+
     it("Verify that label Daily reports text =  'Daily reports' on profile page ", () => {
        expect(ProfilePage.dailyReportsLabel.getText().includes(profilePage.dailyReportsLabelText)).toEqual(true);
     });
+
     it('Verify that label Daily reports counter exists on profile page ', () => {
       expect(ProfilePage.dailyReportsCounter.isDisplayed()).toEqual(true);
      });
+
     it('Verify that the chart field is present on the page', () => {
        expect(ProfilePage.chartField.isDisplayed()).toEqual(true);
      });
+
     it('Verify that the chart field name is present ', () => {
        expect(ProfilePage.chartFieldName.isDisplayed()).toEqual(true);
      });
+
     it('Verify that the chart field name text = "Daily progress"', () => {
  expect(ProfilePage.chartFieldName.getText().includes(profilePage.chartFieldNameText)).toEqual(true);
      });
