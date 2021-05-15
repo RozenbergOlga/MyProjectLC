@@ -6,6 +6,7 @@ import { topMenu, profilePage, diaryPage, drawerMenu } from '../../../../data/ex
 import ReportDrawerMenu from '../../../pageobjects/reportDrawer.menu'
 
 describe('REPORT DRAWER MENU', () => {
+
     before(() => {
         LoginPage.open();
         browser.maximizeWindow();
