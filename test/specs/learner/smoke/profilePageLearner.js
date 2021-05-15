@@ -75,7 +75,7 @@ describe('VERIFY THAT PROFILE PAGE HAS DIARY ELEMENTS', () => {
      });
 
     it('Verify that the chart field name text = "Daily progress"', () => {
- expect(ProfilePage.chartFieldName.getText().includes(profilePage.chartFieldNameText)).toEqual(true);
+       expect(ProfilePage.chartFieldName.getText().includes(profilePage.chartFieldNameText)).toEqual(true);
      });
 
      });
