@@ -6,7 +6,7 @@ import DiaryPage from '../../../pageobjects/diary.page';
 //import WaitTimes from '../../../../data/waitTimes';
 
 describe('VERIFY THAT DIARY PAGE FOR STUDENT ROLE', () => {
-    before(() => {
+     before(() => {
         LoginPage.open();
         browser.maximizeWindow();
         browser.deleteAllCookies();
@@ -60,7 +60,7 @@ describe('VERIFY THAT DIARY PAGE FOR STUDENT ROLE', () => {
        // xit('TC-80.2.1 Verify that Dairy page has field "Total Hours Spent" and quantity( and not equal zero)', function () {
         //    expect(DiaryPage.statTotalHoursSpentCount.getText()).toEqual(digits.zeroText);
             // 0  не должно быть, счетчик не рабочий bug
-        });
+        //});
 
         it('TC-81.1 Verify that Dairy page has field "Average Morale Level" and quantity', function () {
             expect(DiaryPage.statAverageMoraleLevel.getText()).toEqual(diaryPage.statAverageMoraleLevel);
@@ -73,7 +73,7 @@ describe('VERIFY THAT DIARY PAGE FOR STUDENT ROLE', () => {
         //xit('TC-81.2.1 Verify that Dairy page has field "Average Morale Level" and quantity( and not equal zero)', function () {
          //   expect(DiaryPage.statAverageMoraleLevelCount.getText()).toEqual(digits.zeroText);
             // 0  не должно быть, счетчик не рабочий bug
-        });
+        //});
 
         it('TC-82.1 Verify that Dairy page has btn "Create day report"', function () {
             expect(DiaryPage.createReportBtnDairyPage.isDisplayed()).toEqual(true);
