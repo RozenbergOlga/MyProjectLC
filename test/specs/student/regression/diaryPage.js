@@ -3,8 +3,7 @@ import user from '../../../../data/users.data';
 import ProfilePage from '../../../pageobjects/profile.page';
 import { profilePage, diaryPage, digits } from '../../../../data/expected.data';
 import DiaryPage from '../../../pageobjects/diary.page';
-
-import WaitTimes from '../../../../data/waitTimes';
+//import WaitTimes from '../../../../data/waitTimes';
 
 describe('VERIFY THAT DIARY PAGE FOR STUDENT ROLE', () => {
     before(() => {
@@ -58,8 +57,8 @@ describe('VERIFY THAT DIARY PAGE FOR STUDENT ROLE', () => {
             expect(DiaryPage.statTotalHoursSpentCount.isDisplayed()).toEqual(true);
         });
 
-        xit('TC-80.2.1 Verify that Dairy page has field "Total Hours Spent" and quantity( and not equal zero)', function () {
-            expect(DiaryPage.statTotalHoursSpentCount.getText()).toEqual(digits.zeroText);
+       // xit('TC-80.2.1 Verify that Dairy page has field "Total Hours Spent" and quantity( and not equal zero)', function () {
+        //    expect(DiaryPage.statTotalHoursSpentCount.getText()).toEqual(digits.zeroText);
             // 0  не должно быть, счетчик не рабочий bug
         });
 
@@ -71,8 +70,8 @@ describe('VERIFY THAT DIARY PAGE FOR STUDENT ROLE', () => {
             expect(DiaryPage.statAverageMoraleLevelCount.isDisplayed()).toEqual(true);
         });
 
-        xit('TC-81.2.1 Verify that Dairy page has field "Average Morale Level" and quantity( and not equal zero)', function () {
-            expect(DiaryPage.statAverageMoraleLevelCount.getText()).toEqual(digits.zeroText);
+        //xit('TC-81.2.1 Verify that Dairy page has field "Average Morale Level" and quantity( and not equal zero)', function () {
+         //   expect(DiaryPage.statAverageMoraleLevelCount.getText()).toEqual(digits.zeroText);
             // 0  не должно быть, счетчик не рабочий bug
         });
 
