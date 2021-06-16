@@ -1,7 +1,10 @@
 import LoginPage from '../../../pageobjects/login.page';
 import user from '../../../../data/users.data';
+
 import ProfilePage from '../../../pageobjects/profile.page';
+
 import { profilePage, diaryPage, digits } from '../../../../data/expected.data';
+
 import DiaryPage from '../../../pageobjects/diary.page';
 //import WaitTimes from '../../../../data/waitTimes';
 
