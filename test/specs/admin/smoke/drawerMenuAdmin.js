@@ -5,6 +5,7 @@ import { topMenu, profilePage, diaryPage, drawerMenu } from '../../../../data/ex
 import ReportDrawerMenu from '../../../pageobjects/reportDrawer.menu'
 
 describe('REPORT DRAWER MENU', () => {
+
     before(() => {
         LoginPage.open();
         browser.maximizeWindow();
@@ -13,6 +14,7 @@ describe('REPORT DRAWER MENU', () => {
     });
 
     describe('VERIFY THAT ALL REPORT DRAWER MENU ELEMENTS ARE PRESENT & CORRECT', () => {
+
         it("Verify that Report Drawer menu title is present & = 'Create day report'", () => {
             expect(ReportDrawerMenu.RDTitle.isDisplayed()).toEqual(true);
             expect(ReportDrawerMenu.RDTitle.getText()).toEqual(drawerMenu.title);
