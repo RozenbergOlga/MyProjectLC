@@ -5,18 +5,21 @@ const user = {
     firstName: 'Name',
     lastName: 'Family',
   },
+
   learner: {
     email: 'gondooras@gmail.com',
     password: '456qazwsx',
     firstName: 'Martin',
     lastName: 'King',
   },
+
   student: {
     email: 'annavall@qa6.us',
     password: '12345',
     firstName: 'Anna',
     lastName: 'Vall',
   },
+
   admin: {
     email: 'mashka678@ukr.net',
     password: 'fghtyu',
