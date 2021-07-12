@@ -101,11 +101,9 @@ describe('VERIFY THAT DIARY PAGE FOR STUDENT ROLE', () => {
         it('TC-85 Verify that each reports has its text and its similar to the last report', function () {
             // lets finish later
         });
-
         it('TC-90 Verify that report has btn with 3 dots vertical (…)', function () {
             expect(DiaryPage.btn3Dots.isDisplayed());
         });
-
         it('TC-91 Verify that if you click on 3 dots in the last report pop up shows list of 3 btns: Approve, Edit and Delete" ', function () {
             DiaryPage.btn3Dots.moveTo();
              //browser.pause(WaitTimes.WAIT_TIME_SHORT);
