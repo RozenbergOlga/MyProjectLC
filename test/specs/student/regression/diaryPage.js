@@ -3,7 +3,7 @@ import user from '../../../../data/users.data';
 import ProfilePage from '../../../pageobjects/profile.page';
 import { profilePage, diaryPage, digits } from '../../../../data/expected.data';
 import DiaryPage from '../../../pageobjects/diary.page';
-//import WaitTimes from '../../../../data/waitTimes';
+import WaitTimes from '../../../../data/waitTimes';
 
 describe('VERIFY THAT DIARY PAGE FOR STUDENT ROLE', () => {
     before(() => {
