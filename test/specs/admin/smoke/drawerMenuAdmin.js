@@ -5,7 +5,6 @@ import { topMenu, profilePage, diaryPage, drawerMenu } from '../../../../data/ex
 import ReportDrawerMenu from '../../../pageobjects/reportDrawer.menu'
 
 describe('REPORT DRAWER MENU', () => {
-
     before(() => {
         LoginPage.open();
         browser.maximizeWindow();
@@ -19,37 +18,30 @@ describe('REPORT DRAWER MENU', () => {
             expect(ReportDrawerMenu.RDTitle.isDisplayed()).toEqual(true);
             expect(ReportDrawerMenu.RDTitle.getText()).toEqual(drawerMenu.title);
         });
-
         it("Verify that Report Drawer menu sub title is present & = 'Marks to your daily report'", () => {
             expect(ReportDrawerMenu.RDSubTitle.isDisplayed()).toEqual(true);
             expect(ReportDrawerMenu.RDSubTitle.getText()).toEqual(drawerMenu.subTitle);
         });
-
         it("Verify that Report Drawer menu label 'I need help' title is present & correct", () => {
             expect(ReportDrawerMenu.RDLINeedHelp.isDisplayed()).toEqual(true);
             expect(ReportDrawerMenu.RDLINeedHelp.getText().includes(drawerMenu.iNeedHelp)).toEqual(true);
         });
-
         it("Verify that Report Drawer menu label 'I need help' sub text is present &  correct", () => {
             expect(ReportDrawerMenu.RDLINeedHelpSubTXT.isDisplayed()).toEqual(true);
             expect(ReportDrawerMenu.RDLINeedHelpSubTXT.getText().includes(drawerMenu.iNeedHelpSubTXT)).toEqual(true);
         });
-
         it("Verify that Report Drawer menu label 'I understood everything' title is present & correct", () => {
             expect(ReportDrawerMenu.RDLIUnderstoodEverything.isDisplayed()).toEqual(true);
             expect(ReportDrawerMenu.RDLIUnderstoodEverything.getText().includes(drawerMenu.understood)).toEqual(true);
         });
-
         it("Verify that Report Drawer menu label 'I understood everything' sub text is present &  correct", () => {
             expect(ReportDrawerMenu.RDLIUnderstoodEverythingSubTXT.isDisplayed()).toEqual(true);
             expect(ReportDrawerMenu.RDLIUnderstoodEverythingSubTXT.getText().includes(drawerMenu.understoodSubTXT)).toEqual(true);
         });
-
         it("Verify that Report Drawer menu label 'Helped classmates' title is present & correct", () => {
             expect(ReportDrawerMenu.RDLHelpedClassmates.isDisplayed()).toEqual(true);
             expect(ReportDrawerMenu.RDLHelpedClassmates.getText().includes(drawerMenu.helped)).toEqual(true);
         });
-
         it("Verify that Report Drawer menu label 'Helped classmates' sub text is present &  correct", () => {
             expect(ReportDrawerMenu.RDLHelpedClassmatesSubTXT.isDisplayed()).toEqual(true);
             expect(ReportDrawerMenu.RDLHelpedClassmatesSubTXT.getText().includes(drawerMenu.helpedSubTXT)).toEqual(true);
