@@ -46,47 +46,38 @@ describe('REPORT DRAWER MENU', () => {
             expect(ReportDrawerMenu.RDLHelpedClassmatesSubTXT.isDisplayed()).toEqual(true);
             expect(ReportDrawerMenu.RDLHelpedClassmatesSubTXT.getText().includes(drawerMenu.helpedSubTXT)).toEqual(true);
         });
-
         it("Verify that Report Drawer menu label 'Watched lectures' title is present &  correct", () => {
             expect(ReportDrawerMenu.RDLWatchedLectures.isDisplayed()).toEqual(true);
             expect(ReportDrawerMenu.RDLWatchedLectures.getText().includes(drawerMenu.watched)).toEqual(true);
         });
-
         it("Verify that Report Drawer menu label 'Read documentation' title is present &  correct", () => {
             expect(ReportDrawerMenu.RDLRead.isDisplayed()).toEqual(true);
             expect(ReportDrawerMenu.RDLRead.getText().includes(drawerMenu.read)).toEqual(true);
         });
-
         it("Verify that Report Drawer menu label 'Code practice' title is present &  correct", () => {
             expect(ReportDrawerMenu.RDLCode.isDisplayed()).toEqual(true);
             expect(ReportDrawerMenu.RDLCode.getText().includes(drawerMenu.code)).toEqual(true);
         });
-
         it("Verify that Report Drawer menu label 'Quiz practice' title is present &  correct", () => {
             expect(ReportDrawerMenu.RDLQuiz.isDisplayed()).toEqual(true);
             expect(ReportDrawerMenu.RDLQuiz.getText().includes(drawerMenu.quiz)).toEqual(true);
         });
-
         it("Verify that Report Drawer menu label 'Interview preparation' title is present &  correct", () => {
             expect(ReportDrawerMenu.RDLInterviewPrep.isDisplayed()).toEqual(true);
             expect(ReportDrawerMenu.RDLInterviewPrep.getText().includes(drawerMenu.interviewPrep)).toEqual(true);
         });
-
         it("Verify that Report Drawer menu label 'Recruiter phone call' title is present &  correct", () => {
             expect(ReportDrawerMenu.RDLRecruiter.isDisplayed()).toEqual(true);
             expect(ReportDrawerMenu.RDLRecruiter.getText().includes(drawerMenu.recruiter)).toEqual(true);
         });
-
         it("Verify that Report Drawer menu label 'Interview technical screen' title is present &  correct", () => {
             expect(ReportDrawerMenu.RDLInterviewTech.isDisplayed()).toEqual(true);
             expect(ReportDrawerMenu.RDLInterviewTech.getText().includes(drawerMenu.interviewTech)).toEqual(true);
         });
-
         it("Verify that Report Drawer menu label 'Interview onsite' title is present &  correct", () => {
             expect(ReportDrawerMenu.RDLInterviewOnsite.isDisplayed()).toEqual(true);
             expect(ReportDrawerMenu.RDLInterviewOnsite.getText().includes(drawerMenu.interviewOnsite)).toEqual(true);
         });
-
         it("Verify that Report Drawer menu label 'Got a job offer' title is present &  correct", () => {
             expect(ReportDrawerMenu.RDLJobOffer.isDisplayed()).toEqual(true);
             expect(ReportDrawerMenu.RDLJobOffer.getText().includes(drawerMenu.jobOffer)).toEqual(true);
