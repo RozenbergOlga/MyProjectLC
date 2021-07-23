@@ -17,15 +17,12 @@ describe('VERIFY THAT PROFILE PAGE HAS DIARY ELEMENTS', () => {
     it('Verify that diary tab exist in the top menu', () => {
       expect(ProfilePage.topMenuDiaryLearner.isDisplayed()).toEqual(true);
     });
-
     it('Verify that diary tab is clickable in the top menu', () => {
       expect(ProfilePage.topMenuDiaryLearner.isClickable()).toEqual(true);
     });
-
     it("Verify that diary tab text = 'Diary' in the top menu", () => {
       expect(ProfilePage.topMenuDiaryLearner.getText()).toEqual(topMenu.Diary);
     });
-
     it('Verify that diary tab in the top menu redirect to diary page', () => {
       ProfilePage.topMenuDiaryLearner.click();
       expect(browser.getUrl()).toEqual(diaryPage.diaryUrl);
