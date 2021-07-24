@@ -1,8 +1,13 @@
 import   ReportDrawerMenu from '../../../pageobjects/reportDrawer.menu';
+
 import LoginPage from '../../../pageobjects/login.page';
+
 import DiaryPage from '../../../pageobjects/login.page';
+
 import user from '../../../../data/users.data';
+
 import { topMenu, profilePage, diaryPage, digits, drawerMenu } from '../../../../data/expected.data';
+
 import ProfilePage from '../../../pageobjects/profile.page';
 
 describe('DRAWER MENU', () => {
