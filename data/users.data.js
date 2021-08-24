@@ -1,7 +1,6 @@
 const user = {
 
   new: {
-
     email: '20701@qa7.us',
     password: '123456',
     firstName: 'Name',
@@ -9,7 +8,6 @@ const user = {
   },
 
   learner: {
-
     email: 'gondooras@gmail.com',
     password: '456qazwsx',
     firstName: 'Martin',
@@ -17,7 +15,6 @@ const user = {
   },
 
   student: {
-
     email: 'annavall@qa6.us',
     password: '12345',
     firstName: 'Anna',
@@ -25,7 +22,6 @@ const user = {
   },
 
   admin: {
-
     email: 'mashka678@ukr.net',
     password: 'fghtyu',
     firstName: 'Marry',
