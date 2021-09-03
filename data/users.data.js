@@ -1,5 +1,4 @@
 const user = {
-
   new: {
     email: '20701@qa7.us',
     password: '123456',
