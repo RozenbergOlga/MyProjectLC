@@ -1,4 +1,5 @@
 const waitTime = {
+
     WAIT_TIME_SHORT: 1000,
     WAIT_TIME_MEDIUM: 5000,
     WAIT_TIME_LONGER: 8000,
