@@ -1,6 +1,7 @@
 const  topMenu= {
   Diary: 'Diary',
 };
+
 const profilePage = {
   createBtn: 'Create day report',
   dailyReportsLabelText: 'Daily reports',
@@ -8,6 +9,7 @@ const profilePage = {
   diagramTitleTXT: 'Daily progress',
   likeButtonTXT: 'Like 👍0',
 };
+
 const diaryPage = {
   diaryUrl: 'https://stage.localcoding.us/diary',
   createBtn: 'Create day report',
@@ -18,6 +20,7 @@ const diaryPage = {
   statAverageMoraleLevel: 'Average Morale Level',
   array3dots: 'Approve, Edit, Delete',
 };
+
 const drawerMenu = {
   title: 'Create day report',
   subTitle: 'Marks to your daily report',
