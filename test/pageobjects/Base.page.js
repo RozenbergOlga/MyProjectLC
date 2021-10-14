@@ -4,5 +4,4 @@ export default class BasePage {
     browser.url(path);
 
   }
-
 }
