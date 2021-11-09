@@ -6,6 +6,7 @@ import DiaryPage from '../../../pageobjects/diary.page';
 import WaitTimes from '../../../../data/waitTimes';
 
 describe('VERIFY THAT DIARY PAGE FOR STUDENT ROLE', () => {
+
     before(() => {
         LoginPage.open();
         browser.maximizeWindow();
