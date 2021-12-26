@@ -5,6 +5,7 @@ import { profilePage, diaryPage, digits } from '../../../../data/expected.data';
 import DiaryPage from '../../../pageobjects/diary.page';
 
 describe('VERIFY THAT DIARY PAGE FOR LEARNER', () => {
+
   before(() => {
     LoginPage.open();
     browser.maximizeWindow();
