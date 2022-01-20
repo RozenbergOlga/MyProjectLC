@@ -6,6 +6,7 @@ import { topMenu, profilePage, diaryPage, digits, drawerMenu } from '../../../..
 import ProfilePage from '../../../pageobjects/profile.page';
 
 describe('DRAWER MENU', () => {
+
   it('TC-5 Verify that Create day report subpage is appeared when click on the button Create day report on the user page profile', () => {
     LoginPage.open();
     browser.maximizeWindow();
