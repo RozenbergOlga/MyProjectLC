@@ -5,7 +5,6 @@ import { topMenu, profilePage, diaryPage } from '../../../../data/expected.data'
 
 describe('VERIFY THAT PROFILE PAGE HAS DIARY ELEMENTS', () => {
   describe('VERIFY THAT PROFILE PAGE HAS DIARY ELEMENTS IN TOP MENU FOR ADMIN', () => {
-
     before(() => {
       LoginPage.open();
       browser.maximizeWindow();
