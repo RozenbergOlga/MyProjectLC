@@ -23,6 +23,7 @@ class LoginPage extends BasePage {
   open() {
     super.open('/user/login');
   }
+
 }
 
 export default new LoginPage();
