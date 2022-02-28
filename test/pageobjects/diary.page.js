@@ -98,6 +98,7 @@ class DiaryPage extends BasePage {
     }
     return arr.join(', ')
   }
+
 }
 
 export default new DiaryPage();
