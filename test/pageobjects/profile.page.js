@@ -90,9 +90,6 @@ class ProfilePage extends BasePage {
     return $$(".recharts-tooltip-item")[0];
   }
 
-
-
-
 }
 
 export default new ProfilePage();
